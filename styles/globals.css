@@ -1,9 +1,46 @@
-html,
-body {
-  padding: 0;
+:root {
+  --primary: #fefaf6;
+  --black: #232320;
+  --grey: #656270;
+  --pink: #ffc4ff;
+}
+
+@font-face {
+  font-family: 'Biotif';
+  src: url('./fonts/Biotif.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Bogart';
+  src: url('./fonts/Bogart.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+*,
+*::after,
+*::before {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--black);
+  font-family: 'Biotif';
+}
+
+img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
 }
 
 a {
@@ -11,6 +48,20 @@ a {
   text-decoration: none;
 }
 
-* {
-  box-sizing: border-box;
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: 'Bogart', Helvetica, Arial, sans-serif;
+  font-weight: 500;
+}
+
+a,
+button,
+h6,
+input,
+li,
+p {
+  font-family: 'Biotif', Helvetica, Arial, sans-serif;
 }
