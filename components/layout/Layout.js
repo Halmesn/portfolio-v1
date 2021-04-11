@@ -2,7 +2,7 @@ import Navbar from 'components/Navbar';
 import Birds from 'components/Birds';
 
 import { useRouter } from 'next/router';
-import { useState } from 'react';
+import { useDarkMode } from 'hooks/useDarkMode';
 
 import { ThemeProvider } from 'styled-components';
 import { GlobalStyles } from 'styles/GlobalStyle';
@@ -12,11 +12,7 @@ export default function Layout({ children }) {
   const router = useRouter();
   const url = router.pathname;
 
-  const [theme, setTheme] = useState('light');
-
-  const themeToggler = () => {
-    theme === 'light' ? setTheme('dark') : setTheme('light');
-  };
+  const [theme, themeToggler] = useDarkMode();
 
   return url === '/' ? (
     <ThemeProvider theme={theme === 'light' ? lightTheme : darkTheme}>

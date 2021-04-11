@@ -1,4 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
+
 export const GlobalStyles = createGlobalStyle`
 *,
 *::after,
@@ -46,5 +47,4 @@ input,
 li,
 p {
   font-family: 'Biotif', Helvetica, Arial, sans-serif;
-}
-`;
+}`;
