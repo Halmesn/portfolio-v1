@@ -3,17 +3,16 @@ import Link from 'next/link';
 
 export const StyledNavbar = styled.nav`
   padding-top: 0.6rem;
-  width: 90%;
-  z-index: 2;
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
+  width: 100%;
+  position: fixed;
 `;
 
 export const StyledNavList = styled.ul`
   display: flex;
   align-items: center;
   list-style: none;
+  width: 90%;
+  margin: 0 auto;
 
   .no-pd {
     padding: 0;

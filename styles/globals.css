@@ -11,3 +11,10 @@
   font-weight: 400;
   font-style: normal;
 }
+
+@font-face {
+  font-family: 'JosefinSans';
+  src: url('./fonts/JosefinSans.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}

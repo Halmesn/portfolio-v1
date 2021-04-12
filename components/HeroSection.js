@@ -1,8 +1,8 @@
-import { StyledHeader, StyledDescription } from 'styles/HeaderStyle';
+import { StyledHeroSection, StyledDescription } from 'styles/HeroSectionStyle';
 
-export default function Header() {
+export default function HeroSection() {
   return (
-    <StyledHeader>
+    <StyledHeroSection>
       <StyledDescription>
         <h1>
           Hi. I'm Adrian Li. <span>A front-end developer.</span>
@@ -13,6 +13,6 @@ export default function Header() {
           <span>Programming makes me a happy man.</span>
         </p>
       </StyledDescription>
-    </StyledHeader>
+    </StyledHeroSection>
   );
 }

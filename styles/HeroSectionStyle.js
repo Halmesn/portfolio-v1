@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const StyledHeader = styled.header`
+export const StyledHeroSection = styled.section`
   height: 100vh;
   width: 90%;
   margin: 0 auto;

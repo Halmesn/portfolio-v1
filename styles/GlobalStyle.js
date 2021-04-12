@@ -17,7 +17,7 @@ html {
 body {
   background-color: ${({ theme }) => theme.primary};
   font-family: 'Biotif';
-  transition: all 1s linear;
+  transition: all .5s linear;
 }
 
 img {
@@ -47,4 +47,10 @@ input,
 li,
 p {
   font-family: 'Biotif', Helvetica, Arial, sans-serif;
-}`;
+}
+
+::selection {
+	background: #e2e8ff;
+	color: #001d9b
+}
+`;
