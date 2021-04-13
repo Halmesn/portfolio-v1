@@ -34,11 +34,6 @@ export default function WorkButton({ children }) {
             Project5
           </StyledDropDownLink>
         </li>
-        <li>
-          <StyledDropDownLink href="/work/project6">
-            Project6
-          </StyledDropDownLink>
-        </li>
       </StyledDropdownMenu>
     </StyledWorkButton>
   );

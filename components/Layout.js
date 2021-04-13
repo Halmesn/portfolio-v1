@@ -1,8 +1,10 @@
 import Navbar from 'components/Navbar';
 import Birds from 'components/Birds';
 import Footer from 'components/Footer';
+import Grid from 'components/Grid';
 
 import { useRouter } from 'next/router';
+import { useState, useEffect } from 'react';
 import { useDarkMode } from 'hooks/useDarkMode';
 
 import { ThemeProvider } from 'styled-components';
@@ -14,22 +16,31 @@ export default function Layout({ children }) {
   const url = router.pathname;
 
   const [theme, themeToggler] = useDarkMode();
+  const [gridState, setGridState] = useState('close');
 
-  const gridToggler = () => {};
-  const chatToggler = () => {};
+  useEffect(() => {
+    setGridState('close');
+  }, [url]);
 
   return url === '/' ? (
     <ThemeProvider theme={theme === 'light' ? lightTheme : darkTheme}>
       <GlobalStyles />
       <Birds theme={theme}>
         <header style={{ zIndex: 2 }}>
-          <Navbar themeToggler={themeToggler} theme={theme} />
+          <Navbar
+            themeToggler={themeToggler}
+            theme={theme}
+            gridState={gridState}
+          />
         </header>
-        <main style={{ zIndex: 1 }}>{children}</main>
+        <main style={{ zIndex: 1 }}>
+          {children}
+          <Grid gridState={gridState} setGridState={setGridState} />
+        </main>
         <Footer
-          gridToggler={gridToggler}
-          chatToggler={chatToggler}
           theme={theme}
+          setGridState={setGridState}
+          gridState={gridState}
         />
       </Birds>
     </ThemeProvider>
@@ -39,12 +50,11 @@ export default function Layout({ children }) {
       <header style={{ zIndex: 2 }}>
         <Navbar themeToggler={themeToggler} theme={theme} />
       </header>
-      <main style={{ zIndex: 1 }}>{children}</main>
-      <Footer
-        gridToggler={gridToggler}
-        chatToggler={chatToggler}
-        theme={theme}
-      />
+      <main style={{ zIndex: 1 }}>
+        {children}
+        <Grid gridState={gridState} setGridState={setGridState} />
+      </main>
+      <Footer theme={theme} setGridState={setGridState} />
     </ThemeProvider>
   );
 }

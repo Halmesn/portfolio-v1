@@ -5,6 +5,9 @@ export const StyledNavbar = styled.nav`
   padding-top: 0.6rem;
   width: 100%;
   position: fixed;
+  transition: opacity 1s;
+  opacity: ${(props) => (props.gridState === 'open' ? '0' : '1')};
+  pointer-events: ${(props) => (props.gridState === 'open' ? 'none' : 'auto')};
 `;
 
 export const StyledNavList = styled.ul`

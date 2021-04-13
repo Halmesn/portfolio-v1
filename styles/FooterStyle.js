@@ -4,18 +4,8 @@ export const StyledFooter = styled.footer`
   position: fixed;
   bottom: 4%;
   z-index: 2;
-
-  .grid-button {
-    font-family: 'JosefinSans';
-    font-size: 2rem;
-    display: inline-block;
-    background: none;
-    border: 0;
-    cursor: pointer;
-    color: ${({ theme }) => theme.secondary};
-    margin-left: 3rem;
-    outline: none;
-  }
+  opacity: ${(props) => (props.gridState === 'open' ? '0' : '1')};
+  pointer-events: ${(props) => (props.gridState === 'open' ? 'none' : 'auto')};
 
   .chat-button {
     background: ${({ theme }) => theme.secondary};
@@ -34,4 +24,16 @@ export const StyledFooter = styled.footer`
     cursor: pointer;
     outline: none;
   }
+`;
+
+export const StyledGridButton = styled.footer`
+  font-family: 'JosefinSans';
+  font-size: 2rem;
+  display: inline-block;
+  background: none;
+  border: 0;
+  cursor: pointer;
+  color: ${({ theme }) => theme.secondary};
+  margin-left: 3rem;
+  outline: none;
 `;

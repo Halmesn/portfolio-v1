@@ -1,21 +1,15 @@
-import { StyledFooter } from 'styles/FooterStyle';
+import { StyledFooter, StyledGridButton } from 'styles/FooterStyle';
 
-export default function Footer({ gridToggler, chatToggler, theme }) {
-  const onGirdButtonClick = () => {
-    gridToggler();
-  };
-
-  const onChatButtonClick = () => {
-    chatToggler();
+export default function Footer({ theme, setGridState, gridState }) {
+  const onGridButtonClick = () => {
+    setGridState('open');
   };
 
   return (
-    <StyledFooter>
-      <button onClick={onGirdButtonClick} className="grid-button">
-        + explore
-      </button>
+    <StyledFooter gridState={gridState}>
+      <StyledGridButton onClick={onGridButtonClick}>+ explore</StyledGridButton>
       <div className="wip"></div>
-      <button onClick={onChatButtonClick} className="chat-button">
+      <button className="chat-button">
         <svg
           width="52"
           height="52"

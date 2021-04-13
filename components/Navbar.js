@@ -12,11 +12,11 @@ import ThemeToggler from './ThemeToggler';
 
 import { useState } from 'react';
 
-export default function Navbar({ themeToggler, theme }) {
+export default function Navbar({ themeToggler, theme, gridState }) {
   const [isHover, setIsHover] = useState(false);
 
   return (
-    <StyledNavbar>
+    <StyledNavbar gridState={gridState}>
       <StyledNavList>
         <NavList setIsHover={setIsHover}>
           <WorkButton>Work</WorkButton>
