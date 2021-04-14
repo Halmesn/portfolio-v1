@@ -3,6 +3,7 @@ import Link from 'next/link';
 
 export const StyledNavbar = styled.nav`
   padding-top: 0.6rem;
+  z-index: 2;
   width: 100%;
   position: fixed;
   transition: opacity 1s;
@@ -34,7 +35,12 @@ export const StyledNavList = styled.ul`
   }
 
   .center {
-    align-self: center;
+    margin-left: auto;
+    transform: translateX(-2vw);
+  }
+
+  .align-left {
+    margin-left: auto;
   }
 `;
 
@@ -77,51 +83,51 @@ export const StyledNavLink = styled(StyledLink)`
         rotate(${(props) => props.rotate || '2deg'});
     }
   }
-
-  .buzz {
-    animation-name: buzz;
-    animation-duration: 0.5s;
-    animation-timing-function: linear;
-    animation-iteration-count: 1;
-  }
-
-  @keyframes buzz {
-    10% {
-      transform: translateX(3px) rotate(2deg);
-    }
-    20% {
-      transform: translateX(-3px) rotate(-2deg);
-    }
-    30% {
-      transform: translateX(3px) rotate(2deg);
-    }
-    40% {
-      transform: translateX(-3px) rotate(-2deg);
-    }
-    50% {
-      transform: translateX(2px) rotate(1deg);
-    }
-    60% {
-      transform: translateX(-2px) rotate(-1deg);
-    }
-    70% {
-      transform: translateX(2px) rotate(1deg);
-    }
-    80% {
-      transform: translateX(-2px) rotate(-1deg);
-    }
-    90% {
-      transform: translateX(1px) rotate(0);
-    }
-    100% {
-      transform: translateX(-1px) rotate(0);
-    }
-  }
 `;
 
 export const StyledLogo = styled.img`
   width: 3.5rem;
   height: 3.5rem;
+
+  :hover {
+    animation-name: buzz;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+
+    @keyframes buzz {
+      10% {
+        transform: translateX(3px) rotate(2deg);
+      }
+      20% {
+        transform: translateX(-3px) rotate(-2deg);
+      }
+      30% {
+        transform: translateX(3px) rotate(2deg);
+      }
+      40% {
+        transform: translateX(-3px) rotate(-2deg);
+      }
+      50% {
+        transform: translateX(2px) rotate(1deg);
+      }
+      60% {
+        transform: translateX(-2px) rotate(-1deg);
+      }
+      70% {
+        transform: translateX(2px) rotate(1deg);
+      }
+      80% {
+        transform: translateX(-2px) rotate(-1deg);
+      }
+      90% {
+        transform: translateX(1px) rotate(0);
+      }
+      100% {
+        transform: translateX(-1px) rotate(0);
+      }
+    }
+  }
 `;
 
 export const StyledIcon = styled.img`

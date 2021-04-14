@@ -10,11 +10,15 @@ import { gridAnimation } from 'styles/gridAnimation';
 
 import { useEffect } from 'react';
 import { useAnimation } from 'framer-motion';
+import { useRouter } from 'next/router';
 
-export default function Grid({ gridState, setGridState }) {
+export default function Grid({ gridState, setGridState, chatBotState }) {
   const onCloseButtonClick = () => {
     setGridState('close');
   };
+  const router = useRouter();
+  const url = router.pathname;
+
   const controls = useAnimation();
   const {
     animate1,
@@ -39,7 +43,10 @@ export default function Grid({ gridState, setGridState }) {
   } = gridAnimation;
 
   const onMouseScroll = () => {
-    setGridState('open');
+    if (chatBotState === 'open') return;
+    if (url === '/') {
+      setGridState('open');
+    }
   };
 
   useEffect(() => {
@@ -62,9 +69,9 @@ export default function Grid({ gridState, setGridState }) {
     }
 
     return () => {
-      window.removeEventListener('wheel', onMouseScroll, { passive: true });
+      window.removeEventListener('wheel', onMouseScroll);
     };
-  }, [gridState]);
+  }, [gridState, chatBotState]);
 
   return (
     <StyledGrid gridState={gridState}>

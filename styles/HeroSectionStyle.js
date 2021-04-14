@@ -1,14 +1,13 @@
 import styled from 'styled-components';
+import { motion } from 'framer-motion';
 
 export const StyledHeroSection = styled.section`
-  height: 100vh;
   width: 90%;
   margin: 0 auto;
-  display: grid;
-  align-content: center;
+  align-self: center;
 `;
 
-export const StyledDescription = styled.div`
+export const StyledDescription = styled(motion.div)`
   transform: translateY(-1rem);
 
   h1 {

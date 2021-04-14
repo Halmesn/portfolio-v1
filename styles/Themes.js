@@ -6,6 +6,7 @@ export const lightTheme = {
   title: '#232320',
   dropdownText: '#fff',
   dropdownLine: '#ffc4ff',
+  btnHover: '#3c3c3c',
 };
 
 export const darkTheme = {
@@ -16,4 +17,5 @@ export const darkTheme = {
   title: '#ccd6f6',
   dropdownText: '#0a192f',
   dropdownLine: '#8892b0',
+  btnHover: '#00f6bb',
 };

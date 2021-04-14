@@ -1,15 +1,33 @@
-import { StyledFooter, StyledGridButton } from 'styles/FooterStyle';
+import {
+  StyledFooter,
+  StyledGridButton,
+  StyledChatButton,
+} from 'styles/FooterStyle';
+import ChatBot from 'components/ChatBot';
 
-export default function Footer({ theme, setGridState, gridState }) {
+export default function Footer({
+  theme,
+  setGridState,
+  gridState,
+  setChatBotState,
+  chatBotState,
+}) {
   const onGridButtonClick = () => {
     setGridState('open');
+  };
+
+  const onChatBotButtonClick = () => {
+    setChatBotState('open');
   };
 
   return (
     <StyledFooter gridState={gridState}>
       <StyledGridButton onClick={onGridButtonClick}>+ explore</StyledGridButton>
       <div className="wip"></div>
-      <button className="chat-button">
+      <StyledChatButton
+        onClick={onChatBotButtonClick}
+        chatBotState={chatBotState}
+      >
         <svg
           width="52"
           height="52"
@@ -23,7 +41,8 @@ export default function Footer({ theme, setGridState, gridState }) {
             fill={`${theme === 'light' ? '#fff' : '#0a192f'}`}
           />
         </svg>
-      </button>
+      </StyledChatButton>
+      <ChatBot chatBotState={chatBotState} setChatBotState={setChatBotState} />
     </StyledFooter>
   );
 }

@@ -5,40 +5,41 @@ import {
   StyledLogo,
   StyledIcon,
 } from 'styles/NavbarStyle';
-import NavList from './NavList';
 import WorkButton from './WorkButton';
 import ContactButton from './ContactButton';
 import ThemeToggler from './ThemeToggler';
 
-import { useState } from 'react';
-
-export default function Navbar({ themeToggler, theme, gridState }) {
-  const [isHover, setIsHover] = useState(false);
-
+export default function Navbar({
+  themeToggler,
+  theme,
+  gridState,
+  setChatBotState,
+}) {
   return (
     <StyledNavbar gridState={gridState}>
       <StyledNavList>
-        <NavList setIsHover={setIsHover}>
+        <li>
           <WorkButton>Work</WorkButton>
-        </NavList>
-        <NavList setIsHover={setIsHover}>
+        </li>
+        <li>
           <StyledNavLink href="/about" rotate="1deg">
             About
           </StyledNavLink>
-        </NavList>
-        <NavList setIsHover={setIsHover}>
-          <ContactButton>Contact</ContactButton>
-        </NavList>
-        <NavList setIsHover={setIsHover} center>
+        </li>
+        <li>
+          <ContactButton setChatBotState={setChatBotState}>
+            Contact
+          </ContactButton>
+        </li>
+        <li className="center">
           <StyledNavLink href="/" className="no-pd">
             <StyledLogo
               src={`${theme === 'light' ? '/logo.svg' : '/logo-dark.svg'}`}
               alt="logo"
-              className={`${isHover ? 'buzz' : ''}`}
             />
           </StyledNavLink>
-        </NavList>
-        <NavList setIsHover={setIsHover} alignLeft>
+        </li>
+        <li className="align-left">
           <StyledNavLink href="https://github.com/Halmesn">
             <StyledIcon
               src={`${
@@ -51,8 +52,8 @@ export default function Navbar({ themeToggler, theme, gridState }) {
             ></StyledIcon>
             GitHub
           </StyledNavLink>
-        </NavList>
-        <NavList setIsHover={setIsHover}>
+        </li>
+        <li>
           <StyledNavLink
             href="https://www.linkedin.com/in/adrian-li-332395208/"
             rotate="-1deg"
@@ -68,7 +69,7 @@ export default function Navbar({ themeToggler, theme, gridState }) {
             ></StyledIcon>
             LinkedIn
           </StyledNavLink>
-        </NavList>
+        </li>
         <ThemeToggler themeToggler={themeToggler} />
       </StyledNavList>
     </StyledNavbar>

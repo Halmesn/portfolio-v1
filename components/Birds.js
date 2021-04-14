@@ -1,7 +1,7 @@
-import { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import BIRDS from 'vanta/dist/vanta.birds.min';
 
-export default function Birds({ children, theme }) {
+export const Birds = React.memo((props) => {
   const [vantaEffect, setVantaEffect] = useState(0);
   const myRef = useRef(null);
 
@@ -23,14 +23,14 @@ export default function Birds({ children, theme }) {
     };
   }, [vantaEffect]);
 
-  if (vantaEffect && theme === 'dark') {
+  if (vantaEffect && props.theme === 'dark') {
     vantaEffect.setOptions({
       backgroundColor: '#0a192f',
       color1: 0x4f3737,
     });
     vantaEffect.restart();
   }
-  if (vantaEffect && theme === 'light') {
+  if (vantaEffect && props.theme === 'light') {
     vantaEffect.setOptions({
       backgroundColor: '#fefaf6',
       color1: 0xff0000,
@@ -38,5 +38,17 @@ export default function Birds({ children, theme }) {
     vantaEffect.restart();
   }
 
-  return <div ref={myRef}>{children}</div>;
-}
+  return (
+    <div
+      ref={myRef}
+      style={{
+        height: '100vh',
+        position: 'fixed',
+        width: '100%',
+        top: '0',
+        left: '0',
+        zIndex: '0',
+      }}
+    ></div>
+  );
+});
