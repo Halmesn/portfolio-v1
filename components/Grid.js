@@ -10,14 +10,11 @@ import { gridAnimation } from 'styles/gridAnimation';
 
 import { useEffect } from 'react';
 import { useAnimation } from 'framer-motion';
-import { useRouter } from 'next/router';
 
 export default function Grid({ gridState, setGridState, chatBotState }) {
   const onCloseButtonClick = () => {
     setGridState('close');
   };
-  const router = useRouter();
-  const url = router.pathname;
 
   const controls = useAnimation();
   const {
@@ -42,14 +39,14 @@ export default function Grid({ gridState, setGridState, chatBotState }) {
     textAnimation,
   } = gridAnimation;
 
-  const onMouseScroll = () => {
-    if (chatBotState === 'open') return;
-    if (url === '/') {
-      setGridState('open');
-    }
-  };
-
   useEffect(() => {
+    const onMouseScroll = () => {
+      if (chatBotState === 'open') return;
+      if (window.location.pathname === '/') {
+        setGridState('open');
+      }
+    };
+
     window.addEventListener('wheel', onMouseScroll);
 
     if (gridState === 'open') {
@@ -144,6 +141,7 @@ export default function Grid({ gridState, setGridState, chatBotState }) {
         <Link href="/work/project5" passHref>
           <a className="grid__link grid__item-content">
             <StyledGridItemInner
+              onClick={onCloseButtonClick}
               animate={gridState === 'open' ? textAnimation : null}
             >
               <h3 className="grid__item-title">venue</h3>
@@ -158,9 +156,10 @@ export default function Grid({ gridState, setGridState, chatBotState }) {
           gridState={gridState}
           animate={gridState === 'open' ? animate6 : animate6Close}
         ></StyledGridItemBg>
-        <Link href="/work/project1" passHref>
+        <Link href="/work/project4" passHref>
           <a className="grid__link grid__item-content">
             <StyledGridItemInner
+              onClick={onCloseButtonClick}
               animate={gridState === 'open' ? textAnimation : null}
             >
               <h3 className="grid__item-title">sponsors</h3>
@@ -175,14 +174,17 @@ export default function Grid({ gridState, setGridState, chatBotState }) {
           gridState={gridState}
           animate={gridState === 'open' ? animate7 : animate7Close}
         ></StyledGridItemBg>
-        <a href="/work/project1" className="grid__link grid__item-content">
-          <StyledGridItemInner
-            animate={gridState === 'open' ? textAnimation : null}
-          >
-            <h3 className="grid__item-title">tickets</h3>
-            <span className="grid__item-desc">Get the right ticket</span>
-          </StyledGridItemInner>
-        </a>
+        <Link href="/work/project3" passHref>
+          <a className="grid__link grid__item-content">
+            <StyledGridItemInner
+              onClick={onCloseButtonClick}
+              animate={gridState === 'open' ? textAnimation : null}
+            >
+              <h3 className="grid__item-title">tickets</h3>
+              <span className="grid__item-desc">Get the right ticket</span>
+            </StyledGridItemInner>
+          </a>
+        </Link>
       </StyledGridItem>
       <StyledGridItem>
         <StyledGridItemBg
@@ -190,36 +192,39 @@ export default function Grid({ gridState, setGridState, chatBotState }) {
           gridState={gridState}
           animate={gridState === 'open' ? animate8 : animate8Close}
         ></StyledGridItemBg>
-        <a href="#content-4" className="grid__link grid__item-content">
-          <StyledGridItemInner
-            animate={gridState === 'open' ? textAnimation : null}
-          >
-            <h3 className="grid__item-title">speakers</h3>
-            <span className="grid__item-desc">
-              Smart people. All in one place.
-            </span>
-          </StyledGridItemInner>
-        </a>
+        <Link href="/work/project2" passHref>
+          <a className="grid__link grid__item-content">
+            <StyledGridItemInner
+              onClick={onCloseButtonClick}
+              animate={gridState === 'open' ? textAnimation : null}
+            >
+              <h3 className="grid__item-title">speakers</h3>
+              <span className="grid__item-desc">
+                Smart people. All in one place.
+              </span>
+            </StyledGridItemInner>
+          </a>
+        </Link>
       </StyledGridItem>
       <StyledGridItem>
         <StyledGridItemBg
           pos={9}
-          color={`linear-gradient(
-            338.83deg
-            ,#f8c6ff -3.41%,rgba(255,196,255,0) 52.31%),#ffeec4;`}
           gridState={gridState}
           animate={gridState === 'open' ? animate9 : animate9Close}
         ></StyledGridItemBg>
-        <a href="#content-6" className="grid__link grid__item-content">
-          <StyledGridItemInner
-            animate={gridState === 'open' ? textAnimation : null}
-          >
-            <h3 className="grid__item-title">schedule</h3>
-            <span className="grid__item-desc">
-              When the time is right, you'll learn.
-            </span>
-          </StyledGridItemInner>
-        </a>
+        <Link href="/work/project1" passHref>
+          <a className="grid__link grid__item-content">
+            <StyledGridItemInner
+              onClick={onCloseButtonClick}
+              animate={gridState === 'open' ? textAnimation : null}
+            >
+              <h3 className="grid__item-title">schedule</h3>
+              <span className="grid__item-desc">
+                When the time is right, you'll learn.
+              </span>
+            </StyledGridItemInner>
+          </a>
+        </Link>
       </StyledGridItem>
     </StyledGrid>
   );

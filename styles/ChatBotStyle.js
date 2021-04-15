@@ -1,4 +1,5 @@
 import styled, { css } from 'styled-components';
+import { motion } from 'framer-motion';
 
 export const StyledChatBot = styled.div`
   width: 35rem;
@@ -7,19 +8,19 @@ export const StyledChatBot = styled.div`
   background: #fff;
   position: fixed;
   right: 4.5rem;
-  bottom: 8rem;
+  bottom: 4.5rem;
   box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.05), 0 5px 30px 0 rgba(0, 0, 0, 0.15),
     0 3px 3px 0 rgba(0, 0, 0, 0.05);
   font-family: 'Biotif', Helvetica, Arial, sans-serif;
   pointer-events: none;
   opacity: 0;
   transform: translate3d(0, 3rem, 0);
-  transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: all 0.1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   ${(props) =>
     props.chatBotState === 'open' &&
     css`
       opacity: 1;
-      transform: translate3d(0, 3rem, 0);
+      transform: translateZ(0);
       pointer-events: auto;
     `}
 
@@ -30,13 +31,46 @@ export const StyledChatBot = styled.div`
     line-height: 1.5;
     border-radius: 1rem;
     font-size: 1.5rem;
-    margin-top: 1.6rem;
+    margin-top: 1.5rem;
   }
 
   .agent {
     background: #fff;
     color: #222;
     border: 1px solid #c5ced6;
+    margin-right: auto;
+
+    .link-btn {
+      background: #fff6eb;
+      color: #462905;
+      border-radius: 2rem;
+      padding: 1.2rem 0.5rem;
+      border: 0;
+      font-size: 1.5rem;
+      display: inline-block;
+      cursor: pointer;
+      transition: all 0.2s ease-in-out;
+
+      :hover {
+        background: #ffebd2;
+      }
+
+      :active {
+        background: #ffdfb8;
+        outline: 0;
+        transform: translateY(4px);
+      }
+
+      :focus {
+        outline: 0;
+      }
+    }
+  }
+
+  .user {
+    background: #222;
+    color: #fff;
+    margin-left: auto;
   }
 `;
 
@@ -51,6 +85,7 @@ export const StyledChatHeader = styled.div`
   top: 0;
   width: 100%;
   border-radius: 6px 6px 0 0;
+  z-index: 3;
 
   .avatar {
     border-radius: 50%;
@@ -106,40 +141,58 @@ export const StyledChatContent = styled.div`
   position: absolute;
   top: 8rem;
   padding: 0 1.6rem 4rem;
-
-  .options {
-    margin-top: 1.6rem;
-
-    .question-btn {
-      background: #fff6eb;
-      color: #462905;
-      transition: all 0.2s ease-in-out;
-      border-radius: 2rem;
-      padding: 1.2rem 2rem;
-      border: 0;
-      font-size: 1.5rem;
-      display: block;
-      cursor: pointer;
-      margin-top: 1rem;
-
-      :hover {
-        background: #ffebd2;
-      }
-
-      :active {
-        background: #ffdfb8;
-        outline: 0;
-        transform: translateY(4px);
-      }
-
-      :focus {
-        outline: 0;
-      }
-    }
-  }
+  overflow: auto;
 `;
 
-export const StyledChatAnswer = styled.div`
-  display: none;
-  pointer-events: none;
+export const StyledChatAnswer = styled(motion.div)`
+  display: ${(props) => (props.currentQuestion === 0 ? 'none' : 'flex')};
+  pointer-events: ${(props) => (props.currentQuestion === 0 ? 'none' : 'auto')};
+  flex-direction: column;
+`;
+
+export const StyledChatQuestion = styled(motion.div)`
+  margin-top: 1rem;
+
+  .question-btn {
+    background: #fff6eb;
+    color: #462905;
+    transition: all 0.2s ease-in-out;
+    border-radius: 2rem;
+    padding: 1.2rem 2rem;
+    border: 0;
+    font-size: 1.5rem;
+    display: block;
+    cursor: pointer;
+    margin-top: 1rem;
+
+    :first-child {
+      display: ${(props) => (props.currentQuestion === 1 ? 'none' : 'initial')};
+    }
+
+    :nth-child(2) {
+      display: ${(props) => (props.currentQuestion === 2 ? 'none' : 'initial')};
+    }
+
+    :nth-child(3) {
+      display: ${(props) => (props.currentQuestion === 3 ? 'none' : 'initial')};
+    }
+
+    :nth-child(4) {
+      display: ${(props) => (props.currentQuestion === 4 ? 'none' : 'initial')};
+    }
+
+    :hover {
+      background: #ffebd2;
+    }
+
+    :active {
+      background: #ffdfb8;
+      outline: 0;
+      transform: translateY(4px);
+    }
+
+    :focus {
+      outline: 0;
+    }
+  }
 `;

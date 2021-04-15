@@ -7,7 +7,7 @@ export default function HeroSection() {
         animate={{
           opacity: [0, 1],
           y: [30, -5],
-          transition: { duration: 0.7, ease: 'easeInOut' },
+          transition: { duration: 0.8, ease: 'easeInOut' },
         }}
       >
         <h1>

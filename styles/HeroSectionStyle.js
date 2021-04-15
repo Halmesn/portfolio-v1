@@ -8,8 +8,6 @@ export const StyledHeroSection = styled.section`
 `;
 
 export const StyledDescription = styled(motion.div)`
-  transform: translateY(-1rem);
-
   h1 {
     font-size: 7.2rem;
     line-height: 1.1;

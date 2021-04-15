@@ -4,7 +4,7 @@ import Footer from 'components/Footer';
 import Grid from 'components/Grid';
 
 import { useRouter } from 'next/router';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { useDarkMode } from 'hooks/useDarkMode';
 
 import { ThemeProvider } from 'styled-components';
@@ -18,10 +18,6 @@ export default function Layout({ children }) {
   const [theme, themeToggler] = useDarkMode();
   const [gridState, setGridState] = useState('close');
   const [chatBotState, setChatBotState] = useState('close');
-
-  useEffect(() => {
-    setGridState('close');
-  }, [url]);
 
   return (
     <ThemeProvider theme={theme === 'light' ? lightTheme : darkTheme}>

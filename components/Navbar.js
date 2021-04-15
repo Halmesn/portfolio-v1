@@ -5,6 +5,7 @@ import {
   StyledLogo,
   StyledIcon,
 } from 'styles/NavbarStyle';
+
 import WorkButton from './WorkButton';
 import ContactButton from './ContactButton';
 import ThemeToggler from './ThemeToggler';

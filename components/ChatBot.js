@@ -3,19 +3,169 @@ import {
   StyledChatHeader,
   StyledChatContent,
   StyledChatAnswer,
+  StyledChatQuestion,
 } from 'styles/ChatBotStyle';
 
+import TypingBubble from 'components/TypingBubble';
+
 import OutsideClickHandler from 'react-outside-click-handler';
+import { useState, useRef, useEffect } from 'react';
 
 export default function ChatBot({ setChatBotState, chatBotState }) {
+  const ContentRef = useRef();
+
+  const Delayed = ({ children }) => {
+    const [isShown, setIsShown] = useState(false);
+    useEffect(() => {
+      let mounted = true;
+      setTimeout(() => {
+        if (mounted) {
+          setIsShown(true);
+          ContentRef.current?.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 2000);
+      return () => (mounted = false);
+    }, []);
+
+    return isShown ? children : <TypingBubble />;
+  };
+
+  const ChatQNA = ({ currentQuestion, setCurrentQuestion }) => {
+    const question =
+      currentQuestion === 1
+        ? `I'm good, just wanna say hi.`
+        : currentQuestion === 2
+        ? `Fun facts about you?`
+        : currentQuestion === 3
+        ? `Others ways to contact you?`
+        : currentQuestion === 4
+        ? `I'd like to hire you!`
+        : null;
+    const answer =
+      currentQuestion === 1 ? (
+        <Delayed>
+          <div className="agent" ref={ContentRef}>
+            <p>Well hi there!</p>
+            <br />
+            <p>Thanks for saying hi 😁.</p>
+            <br />
+            <p> I hope you've enjoyed browsing my website!</p>
+          </div>
+          <div className="agent">Can I help you with anything else?</div>
+        </Delayed>
+      ) : currentQuestion === 2 ? (
+        <Delayed>
+          <div className="agent" ref={ContentRef}>
+            <p>
+              1. I used to be a news writer✍️ on Tencent platform for 4 years.
+              And there is one article that had got more than 15 millions views
+              in less than 15 hours.
+            </p>
+            <br />
+            <p>
+              2. I want to become a competitive powerlifer💪 in my 30's, and a
+              jacked old man in 80's.
+            </p>
+            <br />
+            <p>
+              3. I really really love my wife. She is the most gorgeous woman in
+              the world👩!
+            </p>
+          </div>
+          <div className="agent">Can I help you with anything else?</div>
+        </Delayed>
+      ) : currentQuestion === 3 ? (
+        <Delayed>
+          <div className="agent" ref={ContentRef}>
+            <p>
+              1. 📧 You can send me an email:
+              <a href="mailto:xiaxi.li.syd@gmail.com">
+                {' '}
+                xiaxi.li.syd@gmail.com
+              </a>
+            </p>
+            <br />
+            <p>
+              I'm always open to new projects, ideas, job opportunities and new
+              connections, my inbox is always open🤝!
+            </p>
+          </div>
+          <div className="agent">Can I help you with anything else?</div>
+        </Delayed>
+      ) : currentQuestion === 4 ? (
+        <Delayed>
+          <div className="agent" ref={ContentRef}>
+            <p>That's great!</p>
+            <br />
+            <p>I'm so Excited🕺</p>
+            <p>
+              Have a look at my{' '}
+              <a href="#" className="link-btn">
+                resume💾
+              </a>{' '}
+              and let's
+              <a href="mailto:xiaxi.li.syd@gmail.com" className="link-btn">
+                chat💌
+              </a>{' '}
+              further!
+            </p>
+          </div>
+          <div className="agent">Can I help you with anything else?</div>
+        </Delayed>
+      ) : (
+        ''
+      );
+
+    const onBtn1Click = () => {
+      setCurrentQuestion(1);
+    };
+    const onBtn2Click = () => {
+      setCurrentQuestion(2);
+    };
+    const onBtn3Click = () => {
+      setCurrentQuestion(3);
+    };
+    const onBtn4Click = () => {
+      setCurrentQuestion(4);
+    };
+
+    return (
+      <>
+        <StyledChatAnswer currentQuestion={currentQuestion}>
+          <div tabIndex="-1" className="user">
+            {question}
+          </div>
+          {answer}
+        </StyledChatAnswer>
+        <StyledChatQuestion currentQuestion={currentQuestion}>
+          <button onClick={onBtn1Click} className="question-btn">
+            👋 I'm good, just wanna say hi.
+          </button>
+          <button onClick={onBtn2Click} className="question-btn">
+            🎉 Fun facts about you?
+          </button>
+          <button onClick={onBtn3Click} className="question-btn">
+            💬 Others ways to contact you?
+          </button>
+          <button onClick={onBtn4Click} className="question-btn">
+            💼 I'd like to hire you!
+          </button>
+        </StyledChatQuestion>
+      </>
+    );
+  };
+  const [currentQuestion, setCurrentQuestion] = useState(0);
+
   const onCloseBtnClick = () => {
     setChatBotState('close');
+    setCurrentQuestion(0);
   };
 
   return (
     <OutsideClickHandler
       onOutsideClick={() => {
         setChatBotState('close');
+        setCurrentQuestion(0);
       }}
     >
       <StyledChatBot chatBotState={chatBotState}>
@@ -55,18 +205,20 @@ export default function ChatBot({ setChatBotState, chatBotState }) {
 
           <div className="agent">How can I help you today?</div>
 
-          <div className="options">
-            <button className="question-btn">
-              👋 I'm good, just wanna say hi.
-            </button>
-            <button className="question-btn">🎉 Fun facts about you?</button>
-            <button className="question-btn">
-              💬 Others ways to contact you?
-            </button>
-            <button className="question-btn">💼 I'd like to hire you!</button>
-          </div>
+          <ChatQNA
+            currentQuestion={currentQuestion}
+            setCurrentQuestion={setCurrentQuestion}
+          />
+          {/* <div ref={ContentRef}></div> */}
         </StyledChatContent>
       </StyledChatBot>
     </OutsideClickHandler>
   );
 }
+
+// button click
+// 1.make option components disappear
+// 2.show answer components, one by one delay 0.2s
+// 3.show option without the previous option
+// 4.when click new option keep the answer and old option
+// 5.when all the option and answer shown up, render finished option: 1.view my work 2. know more about me
