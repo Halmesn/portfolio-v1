@@ -34,11 +34,19 @@ export const StyledChatBot = styled.div`
     margin-top: 1.5rem;
   }
 
+  .mw-93 {
+    max-width: 93%;
+  }
+
   .agent {
     background: #fff;
     color: #222;
     border: 1px solid #c5ced6;
     margin-right: auto;
+
+    .mt-sm {
+      margin-top: 1rem;
+    }
 
     .link-btn {
       background: #fff6eb;

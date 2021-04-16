@@ -7,6 +7,9 @@ export const lightTheme = {
   dropdownText: '#fff',
   dropdownLine: '#ffc4ff',
   btnHover: '#3c3c3c',
+  aboutLine: '#fdf5ee',
+  arrow: '#fe66fe',
+  aboutResume: 'transparent',
 };
 
 export const darkTheme = {
@@ -18,4 +21,7 @@ export const darkTheme = {
   dropdownText: '#0a192f',
   dropdownLine: '#8892b0',
   btnHover: '#00f6bb',
+  aboutLine: '#071325',
+  arrow: '#64ffda',
+  aboutResume: '#64ffda',
 };

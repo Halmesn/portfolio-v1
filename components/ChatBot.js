@@ -64,7 +64,7 @@ export default function ChatBot({ setChatBotState, chatBotState }) {
             <br />
             <p>
               2. I want to become a competitive powerlifer💪 in my 30's, and a
-              jacked old man in 80's.
+              jacked old man in my 80's.
             </p>
             <br />
             <p>
@@ -76,19 +76,17 @@ export default function ChatBot({ setChatBotState, chatBotState }) {
         </Delayed>
       ) : currentQuestion === 3 ? (
         <Delayed>
-          <div className="agent" ref={ContentRef}>
+          <div className="agent mw-93" ref={ContentRef}>
+            <p>📧 Here is my email:</p>
+            <br />
             <p>
-              1. 📧 You can send me an email:
               <a href="mailto:xiaxi.li.syd@gmail.com">
                 {' '}
                 xiaxi.li.syd@gmail.com
               </a>
             </p>
             <br />
-            <p>
-              I'm always open to new projects, ideas, job opportunities and new
-              connections, my inbox is always open🤝!
-            </p>
+            <p>I'm always open to job opportunities and new connections🤝!</p>
           </div>
           <div className="agent">Can I help you with anything else?</div>
         </Delayed>
@@ -96,8 +94,7 @@ export default function ChatBot({ setChatBotState, chatBotState }) {
         <Delayed>
           <div className="agent" ref={ContentRef}>
             <p>That's great!</p>
-            <br />
-            <p>I'm so Excited🕺</p>
+            <p className="mt-sm">I'm so Excited🕺!</p>
             <p>
               Have a look at my{' '}
               <a href="#" className="link-btn">
@@ -209,16 +206,8 @@ export default function ChatBot({ setChatBotState, chatBotState }) {
             currentQuestion={currentQuestion}
             setCurrentQuestion={setCurrentQuestion}
           />
-          {/* <div ref={ContentRef}></div> */}
         </StyledChatContent>
       </StyledChatBot>
     </OutsideClickHandler>
   );
 }
-
-// button click
-// 1.make option components disappear
-// 2.show answer components, one by one delay 0.2s
-// 3.show option without the previous option
-// 4.when click new option keep the answer and old option
-// 5.when all the option and answer shown up, render finished option: 1.view my work 2. know more about me

@@ -9,6 +9,7 @@ export const StyledNavbar = styled.nav`
   transition: opacity 1s;
   opacity: ${(props) => (props.gridState === 'open' ? '0' : '1')};
   pointer-events: ${(props) => (props.gridState === 'open' ? 'none' : 'auto')};
+  background-color: ${({ theme }) => theme.primary}; ;
 `;
 
 export const StyledNavList = styled.ul`
