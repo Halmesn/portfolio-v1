@@ -22,7 +22,7 @@ export default function About() {
       <div className="content">
         <StyledAvatar
           animate={{ opacity: [0, 1], y: -50 }}
-          transition={{ duration: 0.6 }}
+          transition={{ duration: 0.6, delay: 0.15 }}
         >
           <img src="/typewriter.png" alt="a cool typewriter" />
         </StyledAvatar>
@@ -49,7 +49,7 @@ export default function About() {
               learn.
             </p>
             <p>Here are a few technologies I've been working with recently:</p>
-            <ul class="skills">
+            <ul className="skills">
               <li>HTML5 & CSS3</li>
               <li>Sass</li>
               <li>JavaScript (ES6+)</li>

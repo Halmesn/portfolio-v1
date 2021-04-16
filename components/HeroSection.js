@@ -6,8 +6,8 @@ export default function HeroSection() {
       <StyledDescription
         animate={{
           opacity: [0, 1],
-          y: [30, -5],
-          transition: { duration: 0.8, ease: 'easeInOut' },
+          y: 20,
+          transition: { duration: 0.6, delay: 0.3 },
         }}
       >
         <h1>

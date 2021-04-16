@@ -10,14 +10,20 @@ import WorkButton from './WorkButton';
 import ContactButton from './ContactButton';
 import ThemeToggler from './ThemeToggler';
 
+import { useRouter } from 'next/router';
+
 export default function Navbar({
   themeToggler,
   theme,
   gridState,
   setChatBotState,
 }) {
+  const router = useRouter();
+  const url = router.pathname;
+  const isHome = url === '/' ? true : false;
+
   return (
-    <StyledNavbar gridState={gridState}>
+    <StyledNavbar gridState={gridState} isHome={isHome}>
       <StyledNavList>
         <li>
           <WorkButton>Work</WorkButton>
