@@ -7,7 +7,7 @@ function MyApp({ Component, pageProps }) {
   return (
     <>
       <Head>
-        <title>Adrian Li</title>
+        <title>Adrian Li | Front-end Developer | Work</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link
           rel="apple-touch-icon"
