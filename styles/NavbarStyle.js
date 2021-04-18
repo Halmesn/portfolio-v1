@@ -48,8 +48,12 @@ export const StyledNavList = styled.ul`
     margin-left: auto;
     transform: translateX(-2vw);
 
+    @media only screen and (max-width: 87.5em) {
+      transform: translateX(0.8vw);
+    }
+
     @media only screen and (max-width: 42.5em) {
-      transform: translateX(-4vw);
+      transform: translateX(-0.5vw);
     }
 
     @media only screen and (max-width: 28.4em) {
@@ -76,11 +80,11 @@ export const StyledNavLink = styled(StyledLink)`
   padding: 2.5rem 3.5rem;
 
   @media only screen and (max-width: 42.5em) {
-    padding: ${(props) => (props.smPd ? '1rem 1.5rem' : '1vw 1.5vw')};
+    padding: ${(props) => (props.smPd ? '2.5rem 1.5rem' : '1vw 1.5vw')};
   }
 
   @media only screen and (max-width: 28.5em) {
-    padding: ${(props) => (props.smPd ? '0.5rem 1rem' : '0.5vw 1vw')};
+    padding: ${(props) => (props.smPd ? '2.5rem 1rem' : '0.5vw 1vw')};
   }
 
   span {
@@ -88,6 +92,12 @@ export const StyledNavLink = styled(StyledLink)`
 
     @media only screen and (max-width: 42.5em) {
       display: none;
+    }
+  }
+
+  .about {
+    @media only screen and (max-width: 42.5em) {
+      display: initial;
     }
   }
 

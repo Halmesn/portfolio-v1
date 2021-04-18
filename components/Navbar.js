@@ -30,7 +30,7 @@ export default function Navbar({
         </li>
         <li>
           <StyledNavLink href="/about" rotate="1deg">
-            <span>About</span>
+            <span className="about">About</span>
           </StyledNavLink>
         </li>
         <li>
