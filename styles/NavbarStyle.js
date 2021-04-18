@@ -24,6 +24,10 @@ export const StyledNavList = styled.ul`
   width: 90%;
   margin: 0 auto;
 
+  @media only screen and (max-width: 31.2em) {
+    width: 95%;
+  }
+
   .no-pd {
     padding: 0;
 
@@ -43,6 +47,14 @@ export const StyledNavList = styled.ul`
   .center {
     margin-left: auto;
     transform: translateX(-2vw);
+
+    @media only screen and (max-width: 42.5em) {
+      transform: translateX(-4vw);
+    }
+
+    @media only screen and (max-width: 28.4em) {
+      transform: translateX(-1.4vw);
+    }
   }
 
   .align-left {
@@ -52,22 +64,31 @@ export const StyledNavList = styled.ul`
 
 const StyledLink = ({ children, className, href }) => (
   <Link href={href}>
-    <a className={className}>
-      <span>{children}</span>
-    </a>
+    <a className={className}>{children}</a>
   </Link>
 );
 
 export const StyledNavLink = styled(StyledLink)`
   color: ${({ theme }) => theme.secondary};
   font-size: 1.75rem;
-  display: block;
+  display: flex;
+  align-items: center;
   padding: 2.5rem 3.5rem;
+
+  @media only screen and (max-width: 42.5em) {
+    padding: ${(props) => (props.smPd ? '1rem 1.5rem' : '1vw 1.5vw')};
+  }
+
+  @media only screen and (max-width: 28.5em) {
+    padding: ${(props) => (props.smPd ? '0.5rem 1rem' : '0.5vw 1vw')};
+  }
 
   span {
     position: relative;
-    display: flex;
-    align-items: center;
+
+    @media only screen and (max-width: 42.5em) {
+      display: none;
+    }
   }
 
   span::after {
@@ -140,4 +161,13 @@ export const StyledIcon = styled.img`
   height: 1.5rem;
   width: 1.5rem;
   margin-right: 0.5rem;
+
+  @media only screen and (max-width: 42.5em) {
+    height: 1.8rem;
+    width: 1.8rem;
+  }
+
+  @media only screen and (max-width: 28.4em) {
+    transform: translate(1rem, -1px);
+  }
 `;

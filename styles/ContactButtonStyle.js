@@ -10,6 +10,10 @@ export const StyledContactButton = styled.button`
   cursor: pointer;
   position: relative;
 
+  @media only screen and (max-width: 42.5em) {
+    padding: 2.5rem 1.5vw;
+  }
+
   span {
     position: relative;
     display: flex;

@@ -20,23 +20,25 @@ export default function About() {
   return (
     <StyledAboutPage>
       <div className="content">
-        <StyledAvatar
-          animate={{ opacity: [0, 1], y: -50 }}
-          transition={{ duration: 0.6, delay: 0.15 }}
-        >
-          <img src="/typewriter.png" alt="a cool typewriter" />
-        </StyledAvatar>
-        <div>
+        <div className="container">
+          <StyledAvatar
+            animate={{ opacity: [0, 1], y: [0, -50] }}
+            transition={{ duration: 0.7, delay: 0.2 }}
+          >
+            <img src="/typewriter.png" alt="a cool typewriter" />
+          </StyledAvatar>
+        </div>
+        <div className="container">
           <StyledTitle
-            animate={{ opacity: [0, 1], y: -50 }}
-            transition={{ duration: 0.6, delay: 0.55 }}
+            animate={{ opacity: [0, 1], y: [0, -50] }}
+            transition={{ duration: 0.7, delay: 0.55 }}
           >
             I'm Adrian, a <span className="line">self-taught</span> Front-end
             developer living in sunny Brisbane, Australia.
           </StyledTitle>
           <StyledDescription
-            animate={{ opacity: [0, 1], y: -50 }}
-            transition={{ duration: 0.6, delay: 1 }}
+            animate={{ opacity: [0, 1], y: [0, -50] }}
+            transition={{ duration: 0.7, delay: 1 }}
           >
             <p>
               I’m a hard working and dedicated person with a determination to
@@ -61,8 +63,8 @@ export default function About() {
               <li>Google Search</li>
             </ul>
             <StyledResume
-              animate={{ opacity: [0, 1], y: -6 }}
-              transition={{ duration: 0.6, delay: 1.5 }}
+              animate={{ opacity: [0, 1], y: [0, -6] }}
+              transition={{ duration: 0.7, delay: 1.5 }}
             >
               <a href="#">
                 <svg

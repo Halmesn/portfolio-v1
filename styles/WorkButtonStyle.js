@@ -11,6 +11,10 @@ export const StyledWorkButton = styled.button`
   cursor: pointer;
   position: relative;
 
+  @media only screen and (max-width: 42.5em) {
+    padding: 2.5rem 1.5vw;
+  }
+
   span {
     position: relative;
     display: flex;
@@ -63,6 +67,14 @@ export const StyledDropdownMenu = styled.ul`
   transform-origin: top center;
   opacity: 0.3;
   transition: 280ms all 120ms ease-out;
+
+  @media only screen and (max-width: 42.5em) {
+    left: calc(50% + 1rem);
+  }
+
+  @media only screen and (max-width: 31.2em) {
+    left: calc(50% + 2rem);
+  }
 
   li {
     margin-top: 0.8rem;

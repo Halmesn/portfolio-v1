@@ -30,7 +30,7 @@ export default function Navbar({
         </li>
         <li>
           <StyledNavLink href="/about" rotate="1deg">
-            About
+            <span>About</span>
           </StyledNavLink>
         </li>
         <li>
@@ -47,7 +47,7 @@ export default function Navbar({
           </StyledNavLink>
         </li>
         <li className="align-left">
-          <StyledNavLink href="https://github.com/Halmesn">
+          <StyledNavLink href="https://github.com/Halmesn" smPd>
             <StyledIcon
               src={`${
                 theme === 'light'
@@ -55,15 +55,15 @@ export default function Navbar({
                   : '/icons/github-dark.svg'
               }`}
               alt="github icon"
-              className="icon"
             ></StyledIcon>
-            GitHub
+            <span>GitHub</span>
           </StyledNavLink>
         </li>
         <li>
           <StyledNavLink
             href="https://www.linkedin.com/in/adrian-li-332395208/"
             rotate="-1deg"
+            smPd
           >
             <StyledIcon
               src={`${
@@ -72,9 +72,8 @@ export default function Navbar({
                   : '/icons/linkedin-dark.svg'
               }`}
               alt="linkedin icon"
-              className="icon"
             ></StyledIcon>
-            LinkedIn
+            <span>LinkedIn</span>
           </StyledNavLink>
         </li>
         <ThemeToggler themeToggler={themeToggler} />

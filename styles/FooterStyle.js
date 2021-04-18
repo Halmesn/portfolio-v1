@@ -30,12 +30,14 @@ export const StyledChatButton = styled.button`
   height: 5.5rem;
   position: fixed;
   right: 2rem;
-  display: grid;
-  place-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   opacity: 1;
   cursor: pointer;
   outline: none;
+
   ${(props) =>
     props.chatBotState === 'open' &&
     css`
