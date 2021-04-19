@@ -46,7 +46,7 @@ export const StyledNavList = styled.ul`
 
   .center {
     margin-left: auto;
-    transform: translateX(-2vw);
+    transform: translateX(-1vw);
 
     @media only screen and (max-width: 87.5em) {
       transform: translateX(0.8vw);

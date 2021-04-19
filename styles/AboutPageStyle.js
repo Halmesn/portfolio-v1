@@ -2,98 +2,24 @@ import styled from 'styled-components';
 import { motion } from 'framer-motion';
 
 export const StyledAboutPage = styled.section`
-  padding: 20rem 0 8rem 0;
+  padding: 0 0 8rem 0;
+  position: relative;
 
-  @media only screen and (max-width: 42.5em) {
-    padding: 11rem 0 3rem 0;
-  }
-
-  .line {
-    position: relative;
-
-    :hover {
-      &::after {
-        transform: scale3d(1.1, 1.1, 1.1);
-      }
-    }
-
-    ::after {
-      content: '';
-      width: 100%;
-      position: absolute;
-      bottom: -0.8rem;
-      height: 6px;
-      left: 0;
-      display: block;
-      background: ${({ theme }) => theme.line};
-      transform: rotate(-1deg);
-      transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    }
-  }
-
-  .content {
-    width: 80%;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 3rem;
-    padding-bottom: 6rem;
-    border-bottom: 4px solid ${({ theme }) => theme.aboutLine};
-
-    .container {
-      transform: translateY(3.5rem);
-    }
-
-    @media only screen and (max-width: 71.25em) {
-      grid-template-columns: 1fr;
-      justify-items: center;
-      padding: 0 6vw 1rem 6vw;
-    }
-
-    @media only screen and (max-width: 56.25em) {
-      width: 95%;
-      padding: 0 6vw 1rem 6vw;
-    }
-
-    @media only screen and (max-width: 25em) {
-      width: 100%;
-      padding: 0 1vw 1rem 1vw;
-    }
-  }
-
-  .opportunity {
-    padding: 18rem 0;
+  .copyright {
+    font-size: 1.5rem;
+    font-family: 'JosefinSans';
+    color: ${({ theme }) => theme.grey};
+    text-align: center;
     width: 50%;
     margin: 0 auto;
-    text-align: center;
+    line-height: 1.5;
+  }
 
-    @media only screen and (max-width: 56.25em) {
-      padding: 10vw 0 5vw 0;
-      width: 90%;
-    }
-
-    @media only screen and (max-width: 42.5em) {
-      padding: 12vw 0 10vw 0;
-      width: 90%;
-    }
-
-    h2 {
-      font-size: clamp(3rem, 4.8vw, 9rem);
-      line-height: 1.1;
-      color: ${({ theme }) => theme.title};
-
-      span {
-        font-family: inherit;
-        font-size: inherit;
-        display: block;
-      }
-    }
-
-    p {
-      font-size: 2vw;
-      margin-top: 2rem;
-      color: ${({ theme }) => theme.grey};
-    }
+  p {
+    font-size: 1.8rem;
+    color: ${({ theme }) => theme.grey};
+    margin-top: 2.5rem;
+    line-height: 1.7;
 
     .chat {
       position: relative;
@@ -119,18 +45,133 @@ export const StyledAboutPage = styled.section`
         z-index: -1;
       }
     }
-  }
-`;
 
-export const StyledAvatar = styled(motion.div)`
-  img {
+    .line {
+      position: relative;
+      :hover {
+        &::after {
+          transform: scale3d(1.1, 1.1, 1.1);
+        }
+      }
+      ::after {
+        content: '';
+        width: 100%;
+        position: absolute;
+        bottom: -0.8rem;
+        height: 6px;
+        left: 0;
+        display: block;
+        background: ${({ theme }) => theme.line};
+        transform: rotate(-1deg);
+        transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      }
+    }
+
+    @media only screen and (max-width: 93.75em) {
+      font-size: 1.6rem;
+    }
+  }
+
+  .heading {
+    width: 50%;
+    height: 100vh;
+    text-align: center;
+    margin: 0 auto;
+    animation: fadeInUp 0.7s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    .scroll {
+      position: absolute;
+      left: 50%;
+      bottom: 2rem;
+      animation: bounce 1s ease infinite;
+      cursor: pointer;
+
+      ::before {
+        color: ${({ theme }) => theme.secondary};
+        content: '╲╱';
+        font-size: 2rem;
+        height: 4rem;
+        width: 6rem;
+        letter-spacing: -1px;
+        line-height: 4rem;
+        margin-left: -3rem;
+        opacity: 0.8;
+        text-align: center;
+      }
+    }
+
+    h2 {
+      font-size: 7rem;
+      color: ${({ theme }) => theme.secondary};
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(4rem);
+      }
+
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    @keyframes bounce {
+      50% {
+        transform: translateY(-50%);
+      }
+    }
+  }
+
+  .content {
+    width: 80%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto;
+    align-items: center;
+    gap: 9.5rem 3rem;
+    padding-bottom: 6rem;
+
+    .grid-container {
+      transform: translateY(3.5rem);
+    }
+
     @media only screen and (max-width: 71.25em) {
-      transform: scale(0.8);
+      grid-template-columns: 1fr;
+      justify-items: center;
+      padding: 0 6vw 1rem 6vw;
+    }
+
+    @media only screen and (max-width: 56.25em) {
+      width: 95%;
+      padding: 0 6vw 1rem 6vw;
+    }
+
+    @media only screen and (max-width: 25em) {
+      width: 100%;
+      padding: 0 1vw 1rem 1vw;
     }
   }
 `;
 
-export const StyledTitle = styled(motion.h2)`
+export const StyledImg = styled(motion.div)`
+  img {
+    transform: scale(0.85);
+    filter: opacity(0.85);
+    @media only screen and (max-width: 71.25em) {
+      transform: scale(0.7);
+    }
+  }
+`;
+
+export const StyledTitle = styled(motion.h3)`
   font-size: 3.5rem;
   line-height: 1.5;
   color: ${({ theme }) => theme.title};
@@ -141,17 +182,6 @@ export const StyledTitle = styled(motion.h2)`
 `;
 
 export const StyledDescription = styled(motion.div)`
-  p {
-    font-size: 1.8rem;
-    color: ${({ theme }) => theme.grey};
-    margin-top: 2.5rem;
-    line-height: 1.7;
-
-    @media only screen and (max-width: 93.75em) {
-      font-size: 1.6rem;
-    }
-  }
-
   .skills {
     display: grid;
     grid-template-columns: repeat(3, minmax(14rem, 20rem));
@@ -186,14 +216,15 @@ export const StyledDescription = styled(motion.div)`
       }
     }
   }
+
+  .buttons {
+    display: flex;
+    gap: 2rem;
+  }
 `;
 
-export const StyledResume = styled(motion.div)`
+export const StyledButton = styled(motion.div)`
   display: flex;
-
-  @media only screen and (max-width: 71.25em) {
-    justify-content: center;
-  }
 
   svg {
     width: 1.2rem;

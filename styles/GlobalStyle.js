@@ -12,6 +12,7 @@ export const GlobalStyles = createGlobalStyle`
 html {
   font-size: 62.5%;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 
   @media only screen and (max-width: 56.25em) {
     font-size: 55%;
