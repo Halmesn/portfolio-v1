@@ -54,6 +54,11 @@ export const StyledAboutPage = styled.section`
       width: 95%;
       padding: 0 6vw 1rem 6vw;
     }
+
+    @media only screen and (max-width: 25em) {
+      width: 100%;
+      padding: 0 1vw 1rem 1vw;
+    }
   }
 
   .opportunity {
@@ -63,12 +68,17 @@ export const StyledAboutPage = styled.section`
     text-align: center;
 
     @media only screen and (max-width: 56.25em) {
-      padding: 5vw 0;
+      padding: 10vw 0 5vw 0;
+      width: 90%;
+    }
+
+    @media only screen and (max-width: 42.5em) {
+      padding: 12vw 0 10vw 0;
       width: 90%;
     }
 
     h2 {
-      font-size: clamp(2rem, 4.8vw, 9rem);
+      font-size: clamp(3rem, 4.8vw, 9rem);
       line-height: 1.1;
       color: ${({ theme }) => theme.title};
 
@@ -122,10 +132,10 @@ export const StyledAvatar = styled(motion.div)`
       height: 35rem;
       width: 35rem;
     }
-  }
 
-  @media only screen and (max-width: 42.5em) {
-    transform: scale(1.2) translate(3.5vw);
+    @media only screen and (max-width: 25em) {
+      transform: scale(1.2) translateX(-5vw);
+    }
   }
 `;
 
@@ -178,6 +188,10 @@ export const StyledDescription = styled(motion.div)`
         color: ${({ theme }) => theme.arrow};
         line-height: 12px;
         font-size: 2.5rem;
+
+        @media only screen and (max-width: 25em) {
+          font-size: 1.8rem;
+        }
       }
     }
   }

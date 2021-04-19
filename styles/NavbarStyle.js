@@ -28,6 +28,10 @@ export const StyledNavList = styled.ul`
     width: 95%;
   }
 
+  @media only screen and (max-width: 25em) {
+    width: 100%;
+  }
+
   .no-pd {
     padding: 0;
 
