@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { motion } from 'framer-motion';
 
 export const StyledAboutPage = styled.section`
-  padding: 15rem 0 8rem 0;
+  padding: 20rem 0 8rem 0;
 
   @media only screen and (max-width: 42.5em) {
     padding: 11rem 0 3rem 0;
@@ -36,7 +36,7 @@ export const StyledAboutPage = styled.section`
     margin: 0 auto;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 2rem;
+    gap: 3rem;
     padding-bottom: 6rem;
     border-bottom: 4px solid ${({ theme }) => theme.aboutLine};
 
@@ -124,17 +124,8 @@ export const StyledAboutPage = styled.section`
 
 export const StyledAvatar = styled(motion.div)`
   img {
-    height: 50rem;
-    width: 50rem;
-    transform: scale(1.2) translateX(3.5vw);
-
-    @media only screen and (max-width: 42.5em) {
-      height: 35rem;
-      width: 35rem;
-    }
-
-    @media only screen and (max-width: 25em) {
-      transform: scale(1.2) translateX(-5vw);
+    @media only screen and (max-width: 71.25em) {
+      transform: scale(0.8);
     }
   }
 `;

@@ -16,7 +16,7 @@ export const StyledWorkButton = styled.button`
   }
 
   @media only screen and (max-width: 25em) {
-    padding: 2.5rem 2.5rem;
+    padding: 2.5rem 4vw;
   }
 
   span {
