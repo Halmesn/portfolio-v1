@@ -19,13 +19,13 @@ export default function About() {
 
   const ref = useRef();
   const [inViewRef, inView] = useInView({
-    threshold: 0.3,
+    threshold: 0.25,
   });
   const [inViewRef2, inView2] = useInView({
-    threshold: 0.3,
+    threshold: 0.25,
   });
   const [inViewRef3, inView3] = useInView({
-    threshold: 0.3,
+    threshold: 0.25,
   });
 
   const setRefs = useCallback(
@@ -120,7 +120,7 @@ export default function About() {
               hidden: { opacity: 0, y: 0 },
             }}
           >
-            Here are a few technologies I've been working with recently:
+            I like to dream more, learn more and become more.
           </StyledTitle>
           <StyledDescription
             animate={controls}
@@ -131,6 +131,8 @@ export default function About() {
               hidden: { opacity: 0, y: 0 },
             }}
           >
+            <p>Here are a few technologies I've been working with recently:</p>
+
             <ul className="skills">
               <li>HTML5 & CSS3</li>
               <li>Sass</li>
@@ -143,7 +145,6 @@ export default function About() {
               <li>Google Search</li>
             </ul>
 
-            <p>I always like to dream more, learn more and become more.</p>
             <p>
               I’m also a fast learner, able to pick up new skills and juggle
               different projects with relative ease.

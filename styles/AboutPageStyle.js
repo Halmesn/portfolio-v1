@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { motion } from 'framer-motion';
 
 export const StyledAboutPage = styled.section`
-  padding: 0 0 8rem 0;
+  padding-bottom: 8rem;
   position: relative;
 
   .copyright {
@@ -137,27 +137,7 @@ export const StyledAboutPage = styled.section`
     grid-template-rows: auto auto auto;
     align-items: center;
     gap: 9.5rem 3rem;
-    padding-bottom: 6rem;
-
-    .grid-container {
-      transform: translateY(3.5rem);
-    }
-
-    @media only screen and (max-width: 71.25em) {
-      grid-template-columns: 1fr;
-      justify-items: center;
-      padding: 0 6vw 1rem 6vw;
-    }
-
-    @media only screen and (max-width: 56.25em) {
-      width: 95%;
-      padding: 0 6vw 1rem 6vw;
-    }
-
-    @media only screen and (max-width: 25em) {
-      width: 100%;
-      padding: 0 1vw 1rem 1vw;
-    }
+    padding: 5rem 0;
   }
 `;
 
@@ -165,9 +145,6 @@ export const StyledImg = styled(motion.div)`
   img {
     transform: scale(0.85);
     filter: opacity(0.85);
-    @media only screen and (max-width: 71.25em) {
-      transform: scale(0.7);
-    }
   }
 `;
 
@@ -175,10 +152,6 @@ export const StyledTitle = styled(motion.h3)`
   font-size: 3.5rem;
   line-height: 1.5;
   color: ${({ theme }) => theme.title};
-
-  @media only screen and (max-width: 93.75em) {
-    font-size: 3rem;
-  }
 `;
 
 export const StyledDescription = styled(motion.div)`
@@ -191,10 +164,6 @@ export const StyledDescription = styled(motion.div)`
     list-style: none;
     font-size: 1.5rem;
 
-    @media only screen and (max-width: 93.75em) {
-      font-size: 1.4rem;
-    }
-
     li {
       position: relative;
       margin-bottom: 1rem;
@@ -204,15 +173,11 @@ export const StyledDescription = styled(motion.div)`
       ::before {
         content: '▹';
         position: absolute;
-        top: 4px;
-        left: 0px;
+        top: 0.6rem;
+        left: 0;
         color: ${({ theme }) => theme.arrow};
         line-height: 12px;
         font-size: 2.5rem;
-
-        @media only screen and (max-width: 25em) {
-          font-size: 1.8rem;
-        }
       }
     }
   }
@@ -247,14 +212,6 @@ export const StyledButton = styled(motion.div)`
     margin-top: 2rem;
     position: relative;
     transition: all 0.2s linear;
-
-    @media only screen and (max-width: 71.25em) {
-      margin-top: 5rem;
-    }
-
-    @media only screen and (max-width: 42.5em) {
-      margin-top: 3rem;
-    }
 
     :hover {
       transform: scale(1.05);
