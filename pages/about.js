@@ -87,7 +87,7 @@ export default function About() {
             </StyledResume>
           </StyledDescription>
         </div>
-        {/* <div className="container">
+        <div className="container">
           <StyledTitle
             animate={{ opacity: [0, 1], y: [0, -50] }}
             transition={{ duration: 0.7, delay: 0.55 }}
@@ -153,7 +153,7 @@ export default function About() {
           >
             <img src="/tools.png" alt="a cool typewriter" />
           </StyledAvatar>
-        </div> */}
+        </div>
       </div>
       <div className="opportunity">
         <h2>
