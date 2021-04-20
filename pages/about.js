@@ -28,18 +28,6 @@ export default function About() {
     threshold: 0.25,
   });
 
-  const setRefs = useCallback(
-    (node) => {
-      // Ref's from useRef needs to have the node assigned to `current`
-      ref.current = node;
-      // Callback refs, like the one from `useInView`, is a function that takes the node as an argument
-      inViewRef(node);
-      inViewRef2(node);
-      inViewRef3(node);
-    },
-    [inViewRef, inViewRef2, inViewRef3]
-  );
-
   const controls = useAnimation();
 
   useEffect(() => {
@@ -65,7 +53,12 @@ export default function About() {
           <span className="line">self-taught</span> front-end developer{' '}
           <br></br> living in sunny Brisbane, Australia.
         </p>
-        <span className="scroll"></span>
+        <span
+          className="scroll"
+          onClick={() => {
+            ref.current.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          }}
+        ></span>
       </div>
       <div className="content">
         <div className="grid-container" ref={inViewRef}>
@@ -77,6 +70,7 @@ export default function About() {
               visible: { opacity: 1, y: -50 },
               hidden: { opacity: 0, y: 0 },
             }}
+            ref={ref}
           >
             <img src="/typewriter.png" alt="a cool typewriter" />
           </StyledImg>

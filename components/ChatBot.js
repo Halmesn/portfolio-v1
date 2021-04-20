@@ -12,7 +12,7 @@ import OutsideClickHandler from 'react-outside-click-handler';
 import { useState, useRef, useEffect } from 'react';
 
 export default function ChatBot({ setChatBotState, chatBotState }) {
-  const ContentRef = useRef();
+  const contentRef = useRef();
 
   const Delayed = ({ children }) => {
     const [isShown, setIsShown] = useState(false);
@@ -21,7 +21,7 @@ export default function ChatBot({ setChatBotState, chatBotState }) {
       setTimeout(() => {
         if (mounted) {
           setIsShown(true);
-          ContentRef.current?.scrollIntoView({ behavior: 'smooth' });
+          contentRef.current?.scrollIntoView({ behavior: 'smooth' });
         }
       }, 2000);
       return () => (mounted = false);
@@ -44,7 +44,7 @@ export default function ChatBot({ setChatBotState, chatBotState }) {
     const answer =
       currentQuestion === 1 ? (
         <Delayed>
-          <div className="agent" ref={ContentRef}>
+          <div className="agent" ref={contentRef}>
             <p>Well hi there!</p>
             <br />
             <p>Thanks for saying hi 😁.</p>
@@ -55,7 +55,7 @@ export default function ChatBot({ setChatBotState, chatBotState }) {
         </Delayed>
       ) : currentQuestion === 2 ? (
         <Delayed>
-          <div className="agent" ref={ContentRef}>
+          <div className="agent" ref={contentRef}>
             <p>
               1. I used to be a news writer✍️ on Tencent platform for 4 years.
               And there is one article that had got more than 15 millions views
@@ -76,7 +76,7 @@ export default function ChatBot({ setChatBotState, chatBotState }) {
         </Delayed>
       ) : currentQuestion === 3 ? (
         <Delayed>
-          <div className="agent mw-93" ref={ContentRef}>
+          <div className="agent mw-93" ref={contentRef}>
             <p>📧 Here is my email:</p>
             <br />
             <p>
@@ -92,7 +92,7 @@ export default function ChatBot({ setChatBotState, chatBotState }) {
         </Delayed>
       ) : currentQuestion === 4 ? (
         <Delayed>
-          <div className="agent" ref={ContentRef}>
+          <div className="agent" ref={contentRef}>
             <p>That's great!</p>
             <p className="mt-sm">I'm so Excited🕺!</p>
             <p>
