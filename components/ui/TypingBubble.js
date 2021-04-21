@@ -1,4 +1,4 @@
-import { StyledTypingBubble } from 'styles/TypingBubbleStyle';
+import { StyledTypingBubble } from 'components/ui/TypingBubbleStyle';
 
 export default function TypingBubble() {
   return (

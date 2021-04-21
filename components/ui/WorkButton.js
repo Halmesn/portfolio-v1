@@ -2,7 +2,7 @@ import {
   StyledWorkButton,
   StyledDropdownMenu,
   StyledDropDownLink,
-} from 'styles/WorkButtonStyle';
+} from 'components/ui/WorkButtonStyle';
 
 export default function WorkButton({ children }) {
   return (

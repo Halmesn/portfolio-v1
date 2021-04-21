@@ -4,10 +4,10 @@ import {
   StyledChatContent,
   StyledChatAnswer,
   StyledChatQuestion,
-} from 'styles/ChatBotStyle';
+} from 'components/ChatBotStyle';
 
-import TypingBubble from 'components/TypingBubble';
-import { ChatbotCloseIcon } from 'components/Icons';
+import TypingBubble from 'components/ui/TypingBubble';
+import { ChatbotCloseIcon } from 'components/ui/Icons';
 
 import OutsideClickHandler from 'react-outside-click-handler';
 import { useState, useRef, useEffect } from 'react';

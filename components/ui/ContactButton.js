@@ -1,4 +1,4 @@
-import { StyledContactButton } from 'styles/ContactButtonStyle';
+import { StyledContactButton } from 'components/ui/ContactButtonStyle';
 
 export default function ContactButton({ children, setChatBotState }) {
   const onContactButtonClick = () => {

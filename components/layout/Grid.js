@@ -3,12 +3,12 @@ import {
   StyledGridItem,
   StyledGridItemBg,
   StyledGridItemInner,
-} from 'styles/GridStyle';
-import Link from 'next/link';
-
-import { gridAnimation } from 'styles/gridAnimation';
+} from 'components/layout/GridStyle';
+import { GridAnimation } from 'styles/GridAnimation';
 
 import { useEffect } from 'react';
+import Link from 'next/link';
+
 import { useAnimation } from 'framer-motion';
 
 export default function Grid({ gridState, setGridState, chatBotState }) {
@@ -37,7 +37,7 @@ export default function Grid({ gridState, setGridState, chatBotState }) {
     animate8Close,
     animate9Close,
     textAnimation,
-  } = gridAnimation;
+  } = GridAnimation;
 
   useEffect(() => {
     const onMouseScroll = () => {

@@ -1,7 +1,8 @@
-import Head from 'next/head';
+import 'styles/fonts/fonts.css';
 
-import 'styles/globals.css';
-import Layout from 'components/Layout';
+import Layout from 'components/layout/Layout';
+
+import Head from 'next/head';
 
 function MyApp({ Component, pageProps }) {
   return (
@@ -27,10 +28,6 @@ function MyApp({ Component, pageProps }) {
           href="/favicons/favicon-16x16.png"
         />
         <link rel="manifest" href="/favicons/site.webmanifest" />
-        <link
-          rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-        />
         <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
       </Head>
 

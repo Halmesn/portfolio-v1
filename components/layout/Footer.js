@@ -2,10 +2,10 @@ import {
   StyledFooter,
   StyledGridButton,
   StyledChatButton,
-} from 'styles/FooterStyle';
+} from 'components/layout/FooterStyle';
 
 import ChatBot from 'components/ChatBot';
-import { ChatButtonIcon } from 'components/Icons';
+import { ChatButtonIcon } from 'components/ui/Icons';
 
 export default function Footer({
   theme,

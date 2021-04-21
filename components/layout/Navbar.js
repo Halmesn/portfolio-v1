@@ -4,11 +4,11 @@ import {
   StyledNavLink,
   StyledLogo,
   StyledIcon,
-} from 'styles/NavbarStyle';
+} from 'components/layout/NavbarStyle';
 
-import WorkButton from './WorkButton';
-import ContactButton from './ContactButton';
-import ThemeToggler from './ThemeToggler';
+import WorkButton from '../ui/WorkButton';
+import ContactButton from '../ui/ContactButton';
+import ThemeToggler from '../ui/ThemeToggler';
 
 import { useRouter } from 'next/router';
 

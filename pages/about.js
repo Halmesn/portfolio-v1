@@ -6,19 +6,20 @@ import {
   StyledButton,
 } from 'styles/AboutPageStyle';
 
-import { ChatBotContext } from 'components/Layout';
-import { EmailIcon, ResumeIcon } from 'components/Icons';
+import { ChatBotContext } from 'components/layout/Layout';
+import { EmailIcon, ResumeIcon } from 'components/ui/Icons';
 
 import { useContext, useEffect, useRef } from 'react';
 import { useInView } from 'react-intersection-observer';
 import { useAnimation } from 'framer-motion';
 
 export default function About() {
-  const onChatClick = () => {
-    setChatBotState('open');
-  };
+  const setChatBotState = useContext(ChatBotContext);
 
   const ref = useRef();
+
+  const controls = useAnimation();
+
   const [inViewRef, inView] = useInView({
     threshold: 0.25,
   });
@@ -28,8 +29,6 @@ export default function About() {
   const [inViewRef3, inView3] = useInView({
     threshold: 0.25,
   });
-
-  const controls = useAnimation();
 
   useEffect(() => {
     if (inView) {
@@ -43,15 +42,17 @@ export default function About() {
     }
   }, [controls, inView, inView2, inView3]);
 
-  const setChatBotState = useContext(ChatBotContext);
+  const onChatClick = () => {
+    setChatBotState('open');
+  };
 
   return (
     <StyledAboutPage>
       <div className="heading">
         <h2>About me</h2>
         <p>
-          Hello! My name is Adrian, I'm a{' '}
-          <span className="line">self-taught</span> front-end developer{' '}
+          Hello! My name is Adrian, I'm a
+          <span className="line">self-taught</span> front-end developer
           <br></br> living in sunny Brisbane, Australia.
         </p>
         <span

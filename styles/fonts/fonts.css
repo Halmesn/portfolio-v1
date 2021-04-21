@@ -1,20 +1,20 @@
 @font-face {
   font-family: 'Biotif';
-  src: url('./fonts/Biotif.ttf') format('truetype');
+  src: url('./Biotif.ttf') format('truetype');
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Bogart';
-  src: url('./fonts/Bogart.ttf') format('truetype');
+  src: url('./Bogart.ttf') format('truetype');
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'JosefinSans';
-  src: url('./fonts/JosefinSans.ttf') format('truetype');
+  src: url('./JosefinSans.ttf') format('truetype');
   font-weight: 400;
   font-style: normal;
 }

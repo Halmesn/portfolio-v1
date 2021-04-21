@@ -1,4 +1,4 @@
-export const gridAnimation = {
+export const GridAnimation = {
   animate1: {
     opacity: 1,
     scaleX: [0, 1],

@@ -1,4 +1,4 @@
-import { StyledThemeToggler } from 'styles/ThemeTogglerStyle';
+import { StyledThemeToggler } from 'components/ui/ThemeTogglerStyle';
 import { useState } from 'react';
 
 export default function ThemeToggler({ themeToggler }) {
