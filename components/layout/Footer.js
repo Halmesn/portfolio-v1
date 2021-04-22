@@ -1,8 +1,4 @@
-import {
-  StyledFooter,
-  StyledGridButton,
-  StyledChatButton,
-} from 'components/layout/FooterStyle';
+import * as Styled from 'components/layout/FooterStyle';
 
 import ChatBot from 'components/ChatBot';
 import { ChatButtonIcon } from 'components/ui/Icons';
@@ -23,15 +19,17 @@ export default function Footer({
   };
 
   return (
-    <StyledFooter gridState={gridState}>
-      <StyledGridButton onClick={onGridButtonClick}>+ explore</StyledGridButton>
-      <StyledChatButton
+    <Styled.Footer gridState={gridState}>
+      <Styled.GridButton onClick={onGridButtonClick}>
+        + explore
+      </Styled.GridButton>
+      <Styled.ChatButton
         onClick={onChatBotButtonClick}
         chatBotState={chatBotState}
       >
         <ChatButtonIcon theme={theme} />
-      </StyledChatButton>
+      </Styled.ChatButton>
       <ChatBot chatBotState={chatBotState} setChatBotState={setChatBotState} />
-    </StyledFooter>
+    </Styled.Footer>
   );
 }

@@ -1,10 +1,4 @@
-import {
-  StyledChatBot,
-  StyledChatHeader,
-  StyledChatContent,
-  StyledChatAnswer,
-  StyledChatQuestion,
-} from 'components/ChatBotStyle';
+import * as Styled from 'components/ChatBotStyle';
 
 import TypingBubble from 'components/ui/TypingBubble';
 import { ChatbotCloseIcon } from 'components/ui/Icons';
@@ -129,13 +123,13 @@ export default function ChatBot({ setChatBotState, chatBotState }) {
 
     return (
       <>
-        <StyledChatAnswer currentQuestion={currentQuestion}>
+        <Styled.ChatAnswer currentQuestion={currentQuestion}>
           <div tabIndex="-1" className="user">
             {question}
           </div>
           {answer}
-        </StyledChatAnswer>
-        <StyledChatQuestion currentQuestion={currentQuestion}>
+        </Styled.ChatAnswer>
+        <Styled.ChatQuestion currentQuestion={currentQuestion}>
           <button onClick={onBtn1Click} className="question-btn">
             👋 I'm good, just wanna say hi.
           </button>
@@ -148,7 +142,7 @@ export default function ChatBot({ setChatBotState, chatBotState }) {
           <button onClick={onBtn4Click} className="question-btn">
             💼 I'd like to hire you!
           </button>
-        </StyledChatQuestion>
+        </Styled.ChatQuestion>
       </>
     );
   };
@@ -166,8 +160,8 @@ export default function ChatBot({ setChatBotState, chatBotState }) {
         setCurrentQuestion(0);
       }}
     >
-      <StyledChatBot chatBotState={chatBotState}>
-        <StyledChatHeader>
+      <Styled.ChatBot chatBotState={chatBotState}>
+        <Styled.ChatHeader>
           <img src="/avatar.jpg" alt="Pic of Adrian" className="avatar" />
           <div>
             <span className="name">Adrian Bot</span>
@@ -179,9 +173,9 @@ export default function ChatBot({ setChatBotState, chatBotState }) {
               <ChatbotCloseIcon />
             </button>
           </div>
-        </StyledChatHeader>
+        </Styled.ChatHeader>
 
-        <StyledChatContent>
+        <Styled.ChatContent>
           <div className="agent">Hello! My name is Adrian Bot 🤖</div>
 
           <div className="agent">
@@ -194,8 +188,8 @@ export default function ChatBot({ setChatBotState, chatBotState }) {
             currentQuestion={currentQuestion}
             setCurrentQuestion={setCurrentQuestion}
           />
-        </StyledChatContent>
-      </StyledChatBot>
+        </Styled.ChatContent>
+      </Styled.ChatBot>
     </OutsideClickHandler>
   );
 }

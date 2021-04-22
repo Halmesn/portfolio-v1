@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import Link from 'next/link';
 
-export const StyledWorkButton = styled.button`
+export const WorkButton = styled.button`
   color: ${({ theme }) => theme.secondary};
   font-size: 1.75rem;
   display: block;
@@ -57,7 +57,7 @@ export const StyledWorkButton = styled.button`
   }
 `;
 
-export const StyledDropdownMenu = styled.ul`
+export const DropdownMenu = styled.ul`
   list-style: none;
   position: absolute;
   top: 85%;
@@ -93,7 +93,7 @@ const StyledLink = ({ children, className, href }) => (
   </Link>
 );
 
-export const StyledDropDownLink = styled(StyledLink)`
+export const DropDownLink = styled(StyledLink)`
   background-color: transparent;
   color: ${({ theme }) => theme.dropdownText};
   display: block;

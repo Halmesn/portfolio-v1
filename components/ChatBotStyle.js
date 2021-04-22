@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components';
 import { motion } from 'framer-motion';
 
-export const StyledChatBot = styled.div`
+export const ChatBot = styled.div`
   width: 35rem;
   height: 60rem;
   border-radius: 6px;
@@ -16,8 +16,8 @@ export const StyledChatBot = styled.div`
   opacity: 0;
   transform: translate3d(0, 3rem, 0);
   transition: all 0.1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  ${(props) =>
-    props.chatBotState === 'open' &&
+  ${({ chatBotState }) =>
+    chatBotState === 'open' &&
     css`
       opacity: 1;
       transform: translateZ(0);
@@ -82,7 +82,7 @@ export const StyledChatBot = styled.div`
   }
 `;
 
-export const StyledChatHeader = styled.div`
+export const ChatHeader = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -143,7 +143,7 @@ export const StyledChatHeader = styled.div`
   }
 `;
 
-export const StyledChatContent = styled.div`
+export const ChatContent = styled.div`
   height: 52rem;
   width: 100%;
   position: absolute;
@@ -152,13 +152,15 @@ export const StyledChatContent = styled.div`
   overflow: auto;
 `;
 
-export const StyledChatAnswer = styled(motion.div)`
-  display: ${(props) => (props.currentQuestion === 0 ? 'none' : 'flex')};
-  pointer-events: ${(props) => (props.currentQuestion === 0 ? 'none' : 'auto')};
+export const ChatAnswer = styled(motion.div)`
+  display: ${({ currentQuestion }) =>
+    currentQuestion === 0 ? 'none' : 'flex'};
+  pointer-events: ${({ currentQuestion }) =>
+    currentQuestion === 0 ? 'none' : 'auto'};
   flex-direction: column;
 `;
 
-export const StyledChatQuestion = styled(motion.div)`
+export const ChatQuestion = styled(motion.div)`
   margin-top: 1rem;
 
   .question-btn {
@@ -174,19 +176,23 @@ export const StyledChatQuestion = styled(motion.div)`
     margin-top: 1rem;
 
     :first-child {
-      display: ${(props) => (props.currentQuestion === 1 ? 'none' : 'initial')};
+      display: ${({ currentQuestion }) =>
+        currentQuestion === 1 ? 'none' : 'initial'};
     }
 
     :nth-child(2) {
-      display: ${(props) => (props.currentQuestion === 2 ? 'none' : 'initial')};
+      display: ${({ currentQuestion }) =>
+        currentQuestion === 2 ? 'none' : 'initial'};
     }
 
     :nth-child(3) {
-      display: ${(props) => (props.currentQuestion === 3 ? 'none' : 'initial')};
+      display: ${({ currentQuestion }) =>
+        currentQuestion === 3 ? 'none' : 'initial'};
     }
 
     :nth-child(4) {
-      display: ${(props) => (props.currentQuestion === 4 ? 'none' : 'initial')};
+      display: ${({ currentQuestion }) =>
+        currentQuestion === 4 ? 'none' : 'initial'};
     }
 
     :hover {

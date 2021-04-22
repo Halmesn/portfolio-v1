@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const StyledTypingBubble = styled.div`
+export const TypingBubble = styled.div`
   background-color: #fff6eb;
   padding: 1.6rem 2.8rem;
   border-radius: 2rem;

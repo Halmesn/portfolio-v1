@@ -1,9 +1,9 @@
-import { StyledHeroSection, StyledDescription } from 'styles/HomeStyle';
+import * as Styled from 'styles/HomeStyle';
 
 export default function Home() {
   return (
-    <StyledHeroSection>
-      <StyledDescription>
+    <Styled.HeroSection>
+      <Styled.Description>
         <h1>
           Hi. I'm Adrian Li. <span>A front-end developer.</span>
         </h1>
@@ -12,7 +12,7 @@ export default function Home() {
           and learning new technologies.
           <span>Programming makes me a happy man.😄</span>
         </p>
-      </StyledDescription>
-    </StyledHeroSection>
+      </Styled.Description>
+    </Styled.HeroSection>
   );
 }

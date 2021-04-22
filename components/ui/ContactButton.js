@@ -1,4 +1,4 @@
-import { StyledContactButton } from 'components/ui/ContactButtonStyle';
+import * as Styled from 'components/ui/ContactButtonStyle';
 
 export default function ContactButton({ children, setChatBotState }) {
   const onContactButtonClick = () => {
@@ -6,8 +6,8 @@ export default function ContactButton({ children, setChatBotState }) {
   };
 
   return (
-    <StyledContactButton onClick={onContactButtonClick}>
+    <Styled.ContactButton onClick={onContactButtonClick}>
       <span>{children}</span>
-    </StyledContactButton>
+    </Styled.ContactButton>
   );
 }

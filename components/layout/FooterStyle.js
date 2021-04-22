@@ -1,14 +1,15 @@
 import styled, { css } from 'styled-components';
 
-export const StyledFooter = styled.footer`
+export const Footer = styled.footer`
   position: fixed;
   bottom: 4%;
   z-index: 2;
-  opacity: ${(props) => (props.gridState === 'open' ? '0' : '1')};
-  pointer-events: ${(props) => (props.gridState === 'open' ? 'none' : 'auto')};
+  opacity: ${({ gridState }) => (gridState === 'open' ? '0' : '1')};
+  pointer-events: ${({ gridState }) =>
+    gridState === 'open' ? 'none' : 'auto'};
 `;
 
-export const StyledGridButton = styled.button`
+export const GridButton = styled.button`
   font-family: 'JosefinSans';
   font-size: 2rem;
   display: inline-block;
@@ -20,7 +21,7 @@ export const StyledGridButton = styled.button`
   outline: none;
 `;
 
-export const StyledChatButton = styled.button`
+export const ChatButton = styled.button`
   background: ${({ theme }) => theme.secondary};
   border-radius: 50%;
   border: 0;
@@ -38,8 +39,8 @@ export const StyledChatButton = styled.button`
   cursor: pointer;
   outline: none;
 
-  ${(props) =>
-    props.chatBotState === 'open' &&
+  ${({ chatBotState }) =>
+    chatBotState === 'open' &&
     css`
       pointer-events: none;
       opacity: 0;

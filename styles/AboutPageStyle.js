@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 
-export const StyledAboutPage = styled.section`
+export const Container = styled.section`
   padding-bottom: 8rem;
   position: relative;
 
@@ -141,20 +141,20 @@ export const StyledAboutPage = styled.section`
   }
 `;
 
-export const StyledImg = styled(motion.div)`
+export const Img = styled(motion.div)`
   img {
     transform: scale(0.85);
     filter: opacity(0.85);
   }
 `;
 
-export const StyledTitle = styled(motion.h3)`
+export const Title = styled(motion.h3)`
   font-size: 3.5rem;
   line-height: 1.5;
   color: ${({ theme }) => theme.title};
 `;
 
-export const StyledDescription = styled(motion.div)`
+export const Description = styled(motion.div)`
   .skills {
     display: grid;
     grid-template-columns: repeat(3, minmax(14rem, 20rem));
@@ -188,7 +188,7 @@ export const StyledDescription = styled(motion.div)`
   }
 `;
 
-export const StyledButton = styled(motion.div)`
+export const Button = styled(motion.div)`
   display: flex;
 
   svg {

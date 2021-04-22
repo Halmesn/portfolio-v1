@@ -1,40 +1,36 @@
-import {
-  StyledWorkButton,
-  StyledDropdownMenu,
-  StyledDropDownLink,
-} from 'components/ui/WorkButtonStyle';
+import * as Styled from 'components/ui/WorkButtonStyle';
 
 export default function WorkButton({ children }) {
   return (
-    <StyledWorkButton className="sm-left-pd">
+    <Styled.WorkButton className="sm-left-pd">
       <span>{children}</span>
-      <StyledDropdownMenu id="work-dropdown">
+      <Styled.DropdownMenu id="work-dropdown">
         <li>
-          <StyledDropDownLink href="/work/project1">
+          <Styled.DropDownLink href="/work/project1">
             Project1
-          </StyledDropDownLink>
+          </Styled.DropDownLink>
         </li>
         <li>
-          <StyledDropDownLink href="/work/project2">
+          <Styled.DropDownLink href="/work/project2">
             Project2
-          </StyledDropDownLink>
+          </Styled.DropDownLink>
         </li>
         <li>
-          <StyledDropDownLink href="/work/project3">
+          <Styled.DropDownLink href="/work/project3">
             Project3
-          </StyledDropDownLink>
+          </Styled.DropDownLink>
         </li>
         <li>
-          <StyledDropDownLink href="/work/project4">
+          <Styled.DropDownLink href="/work/project4">
             Project4
-          </StyledDropDownLink>
+          </Styled.DropDownLink>
         </li>
         <li>
-          <StyledDropDownLink href="/work/project5">
+          <Styled.DropDownLink href="/work/project5">
             Project5
-          </StyledDropDownLink>
+          </Styled.DropDownLink>
         </li>
-      </StyledDropdownMenu>
-    </StyledWorkButton>
+      </Styled.DropdownMenu>
+    </Styled.WorkButton>
   );
 }

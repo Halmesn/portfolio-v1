@@ -1,10 +1,4 @@
-import {
-  StyledAboutPage,
-  StyledImg,
-  StyledTitle,
-  StyledDescription,
-  StyledButton,
-} from 'styles/AboutPageStyle';
+import * as Styled from 'styles/AboutPageStyle';
 
 import { ChatBotContext } from 'components/layout/Layout';
 import { EmailIcon, ResumeIcon } from 'components/ui/Icons';
@@ -47,7 +41,7 @@ export default function About() {
   };
 
   return (
-    <StyledAboutPage>
+    <Styled.Container>
       <div className="heading">
         <h2>About me</h2>
         <p>
@@ -64,7 +58,7 @@ export default function About() {
       </div>
       <div className="content">
         <div className="grid-container" ref={inViewRef}>
-          <StyledImg
+          <Styled.Img
             animate={controls}
             initial="hidden"
             transition={{ duration: 0.5 }}
@@ -75,10 +69,10 @@ export default function About() {
             ref={ref}
           >
             <img src="/typewriter.png" alt="a cool typewriter" />
-          </StyledImg>
+          </Styled.Img>
         </div>
         <div className="grid-container">
-          <StyledTitle
+          <Styled.Title
             animate={controls}
             initial="hidden"
             transition={{ duration: 0.5, delay: 0.5 }}
@@ -88,8 +82,8 @@ export default function About() {
             }}
           >
             I'm the one you'd like to work with
-          </StyledTitle>
-          <StyledDescription
+          </Styled.Title>
+          <Styled.Description
             animate={controls}
             initial="hidden"
             transition={{ duration: 0.5, delay: 0.5 }}
@@ -104,10 +98,10 @@ export default function About() {
               and I always try to better myself with every project I work on.
             </p>
             <p></p>
-          </StyledDescription>
+          </Styled.Description>
         </div>
         <div className="grid-container" ref={inViewRef2}>
-          <StyledTitle
+          <Styled.Title
             animate={controls}
             initial="hidden"
             transition={{ duration: 0.5 }}
@@ -117,8 +111,8 @@ export default function About() {
             }}
           >
             I like to dream more, learn more and become more.
-          </StyledTitle>
-          <StyledDescription
+          </Styled.Title>
+          <Styled.Description
             animate={controls}
             initial="hidden"
             transition={{ duration: 0.5 }}
@@ -152,10 +146,10 @@ export default function About() {
               <li>React Design Pattern</li>
               <li>React Animations</li>
             </ul>
-          </StyledDescription>
+          </Styled.Description>
         </div>
         <div className="grid-container">
-          <StyledImg
+          <Styled.Img
             animate={controls}
             initial="hidden"
             transition={{ duration: 0.5, delay: 0.5 }}
@@ -165,10 +159,10 @@ export default function About() {
             }}
           >
             <img src="/tools.png" alt="a cool rocket" />
-          </StyledImg>
+          </Styled.Img>
         </div>
         <div className="grid-container" ref={inViewRef3}>
-          <StyledImg
+          <Styled.Img
             animate={controls}
             initial="hidden"
             transition={{ duration: 0.5 }}
@@ -178,10 +172,10 @@ export default function About() {
             }}
           >
             <img src="/mails.png" alt="a cool mailbox" />
-          </StyledImg>
+          </Styled.Img>
         </div>
         <div className="grid-container">
-          <StyledTitle
+          <Styled.Title
             animate={controls}
             initial="hidden"
             transition={{ duration: 0.5, delay: 0.5 }}
@@ -191,8 +185,8 @@ export default function About() {
             }}
           >
             I'm always open to job opportunities and new connections.
-          </StyledTitle>
-          <StyledDescription
+          </Styled.Title>
+          <Styled.Description
             animate={controls}
             initial="hidden"
             transition={{ duration: 0.5, delay: 0.5 }}
@@ -209,25 +203,25 @@ export default function About() {
               &nbsp;with me!
             </p>
             <div className="buttons">
-              <StyledButton>
+              <Styled.Button>
                 <a href="mailto:xiaxi.li.syd@gmail.com">
                   <EmailIcon />
                   Email
                 </a>
-              </StyledButton>
-              <StyledButton>
+              </Styled.Button>
+              <Styled.Button>
                 <a href="#">
                   <ResumeIcon />
                   Resume
                 </a>
-              </StyledButton>
+              </Styled.Button>
             </div>
-          </StyledDescription>
+          </Styled.Description>
         </div>
       </div>
       <div className="copyright">
         Designed & Built with love ❤️ by <br /> Adrian Li © 2021
       </div>
-    </StyledAboutPage>
+    </Styled.Container>
   );
 }

@@ -1,14 +1,8 @@
-import {
-  StyledNavbar,
-  StyledNavList,
-  StyledNavLink,
-  StyledLogo,
-  StyledIcon,
-} from 'components/layout/NavbarStyle';
+import * as Styled from 'components/layout/NavbarStyle';
 
-import WorkButton from '../ui/WorkButton';
-import ContactButton from '../ui/ContactButton';
-import ThemeToggler from '../ui/ThemeToggler';
+import WorkButton from 'components/ui/WorkButton';
+import ContactButton from 'components/ui/ContactButton';
+import ThemeToggler from 'components/ui/ThemeToggler';
 
 import { useRouter } from 'next/router';
 
@@ -23,15 +17,15 @@ export default function Navbar({
   const isHome = url === '/' ? true : false;
 
   return (
-    <StyledNavbar gridState={gridState} isHome={isHome}>
-      <StyledNavList>
+    <Styled.Navbar gridState={gridState} isHome={isHome}>
+      <Styled.NavList>
         <li>
           <WorkButton>Work</WorkButton>
         </li>
         <li>
-          <StyledNavLink href="/about" rotate="1deg">
+          <Styled.NavLink href="/about" rotate="1deg">
             <span className="about">About</span>
-          </StyledNavLink>
+          </Styled.NavLink>
         </li>
         <li>
           <ContactButton setChatBotState={setChatBotState}>
@@ -39,45 +33,45 @@ export default function Navbar({
           </ContactButton>
         </li>
         <li className="center">
-          <StyledNavLink href="/" className="no-pd">
-            <StyledLogo
+          <Styled.NavLink href="/" className="no-pd">
+            <Styled.Logo
               src={`${theme === 'light' ? '/logo.svg' : '/logo-dark.svg'}`}
               alt="logo"
             />
-          </StyledNavLink>
+          </Styled.NavLink>
         </li>
         <li className="align-left">
-          <StyledNavLink href="https://github.com/Halmesn" smPd>
-            <StyledIcon
+          <Styled.NavLink href="https://github.com/Halmesn" smPd>
+            <Styled.Icon
               src={`${
                 theme === 'light'
                   ? '/icons/github.svg'
                   : '/icons/github-dark.svg'
               }`}
               alt="github icon"
-            ></StyledIcon>
+            ></Styled.Icon>
             <span>GitHub</span>
-          </StyledNavLink>
+          </Styled.NavLink>
         </li>
         <li>
-          <StyledNavLink
+          <Styled.NavLink
             href="https://www.linkedin.com/in/adrian-li-332395208/"
             rotate="-1deg"
             smPd
           >
-            <StyledIcon
+            <Styled.Icon
               src={`${
                 theme === 'light'
                   ? '/icons/linkedin.svg'
                   : '/icons/linkedin-dark.svg'
               }`}
               alt="linkedin icon"
-            ></StyledIcon>
+            ></Styled.Icon>
             <span>LinkedIn</span>
-          </StyledNavLink>
+          </Styled.NavLink>
         </li>
         <ThemeToggler themeToggler={themeToggler} />
-      </StyledNavList>
-    </StyledNavbar>
+      </Styled.NavList>
+    </Styled.Navbar>
   );
 }

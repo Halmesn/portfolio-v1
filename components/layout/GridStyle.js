@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 
-export const StyledGrid = styled.div`
+export const Grid = styled.div`
   display: grid;
   position: fixed;
   z-index: 1000;
@@ -11,7 +11,8 @@ export const StyledGrid = styled.div`
   height: 100vh;
   grid-template-columns: repeat(32, 3.125vw);
   grid-template-rows: repeat(32, 3.125vh);
-  pointer-events: ${(props) => (props.gridState === 'open' ? 'auto' : 'none')};
+  pointer-events: ${({ gridState }) =>
+    gridState === 'open' ? 'auto' : 'none'};
 
   .grid__item-content {
     position: relative;
@@ -57,7 +58,7 @@ export const StyledGrid = styled.div`
   }
 `;
 
-export const StyledGridItemInner = styled(motion.div)`
+export const GridItemInner = styled(motion.div)`
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -67,7 +68,7 @@ export const StyledGridItemInner = styled(motion.div)`
   opacity: 0;
 `;
 
-export const StyledGridItem = styled.div`
+export const GridItem = styled.div`
   position: relative;
   overflow: hidden;
   display: flex;
@@ -138,35 +139,35 @@ export const StyledGridItem = styled.div`
   }
 `;
 
-export const StyledGridItemBg = styled(motion.div)`
+export const GridItemBg = styled(motion.div)`
   position: absolute;
   width: 100%;
   height: 100%;
   top: 0;
   left: 0;
-  transform: ${(props) =>
-    props.pos % 2 === 0 ? 'scaleY(0) scaleX(1)' : 'scaleY(1) scaleX(0)'};
+  transform: ${({ pos }) =>
+    pos % 2 === 0 ? 'scaleY(0) scaleX(1)' : 'scaleY(1) scaleX(0)'};
   opacity: 0;
   box-shadow: 0 0 0 2px currentColor;
-  background: ${(props) =>
-    props.pos === 6
+  background: ${({ pos, color }) =>
+    pos === 6
       ? `#7296de`
-      : props.pos === 7
+      : pos === 7
       ? `#7c95b5`
-      : props.pos === 9
+      : pos === 9
       ? `#c57d76`
-      : props.pos === 8
+      : pos === 8
       ? `#af9b9b`
-      : props.pos === 5
+      : pos === 5
       ? `#ccd6f6`
-      : props.color};
-  color: ${(props) => props.color};
-  transform-origin: ${(props) => {
-    if (props.gridState === 'open') {
-      return props.pos % 2 === 0 ? '50% 100%' : '0% 50%';
+      : color};
+  color: ${({ color }) => color};
+  transform-origin: ${({ gridState, pos }) => {
+    if (gridState === 'open') {
+      return pos % 2 === 0 ? '50% 100%' : '0% 50%';
     }
-    if (props.gridState === 'close') {
-      return props.pos % 2 === 0 ? '50% 0%' : '100% 50%';
+    if (gridState === 'close') {
+      return pos % 2 === 0 ? '50% 0%' : '100% 50%';
     }
   }};
 `;

@@ -1,23 +1,24 @@
 import styled, { css } from 'styled-components';
 import Link from 'next/link';
 
-export const StyledNavbar = styled.nav`
+export const Navbar = styled.nav`
   padding-top: 0.6rem;
   z-index: 2;
   width: 100%;
   position: fixed;
   transition: opacity 1s;
-  opacity: ${(props) => (props.gridState === 'open' ? '0' : '1')};
-  pointer-events: ${(props) => (props.gridState === 'open' ? 'none' : 'auto')};
+  opacity: ${({ gridState }) => (gridState === 'open' ? '0' : '1')};
+  pointer-events: ${({ gridState }) =>
+    gridState === 'open' ? 'none' : 'auto'};
   background-color: ${({ theme }) => theme.primary};
-  ${(props) =>
-    props.isHome &&
+  ${({ isHome }) =>
+    isHome &&
     css`
       background-color: transparent;
     `}
 `;
 
-export const StyledNavList = styled.ul`
+export const NavList = styled.ul`
   display: flex;
   align-items: center;
   list-style: none;
@@ -72,7 +73,7 @@ const StyledLink = ({ children, className, href }) => (
   </Link>
 );
 
-export const StyledNavLink = styled(StyledLink)`
+export const NavLink = styled(StyledLink)`
   color: ${({ theme }) => theme.secondary};
   font-size: 1.75rem;
   display: flex;
@@ -80,11 +81,11 @@ export const StyledNavLink = styled(StyledLink)`
   padding: 2.5rem 3.5rem;
 
   @media only screen and (max-width: 42.5em) {
-    padding: ${(props) => (props.smPd ? '2.5rem 1.5rem' : '1vw 1.5vw')};
+    padding: ${({ smPd }) => (smPd ? '2.5rem 1.5rem' : '1vw 1.5vw')};
   }
 
   @media only screen and (max-width: 28.5em) {
-    padding: ${(props) => (props.smPd ? '2.5rem 1rem' : '0.5vw 1vw')};
+    padding: ${({ smPd }) => (smPd ? '2.5rem 1rem' : '0.5vw 1vw')};
   }
 
   span {
@@ -117,12 +118,12 @@ export const StyledNavLink = styled(StyledLink)`
     span::after {
       opacity: 1;
       transform: translateZ(0) scale3d(1.1, 1.1, 1.1)
-        rotate(${(props) => props.rotate || '2deg'});
+        rotate(${({ rotate }) => rotate || '2deg'});
     }
   }
 `;
 
-export const StyledLogo = styled.img`
+export const Logo = styled.img`
   width: 3.5rem;
   height: 3.5rem;
 
@@ -167,7 +168,7 @@ export const StyledLogo = styled.img`
   }
 `;
 
-export const StyledIcon = styled.img`
+export const Icon = styled.img`
   height: 1.5rem;
   width: 1.5rem;
   margin-right: 0.5rem;

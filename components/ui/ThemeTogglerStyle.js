@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const StyledThemeToggler = styled.div`
+export const ThemeToggler = styled.div`
   transform: translate(1rem, -2px);
 
   @keyframes line-animation {

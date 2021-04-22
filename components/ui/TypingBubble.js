@@ -1,13 +1,13 @@
-import { StyledTypingBubble } from 'components/ui/TypingBubbleStyle';
+import * as Styled from 'components/ui/TypingBubbleStyle';
 
 export default function TypingBubble() {
   return (
-    <StyledTypingBubble>
+    <Styled.TypingBubble>
       <div className="typing">
         <div className="dot"></div>
         <div className="dot"></div>
         <div className="dot"></div>
       </div>
-    </StyledTypingBubble>
+    </Styled.TypingBubble>
   );
 }

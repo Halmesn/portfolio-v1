@@ -1,13 +1,13 @@
 import styled from 'styled-components';
 
-export const StyledHeroSection = styled.section`
+export const HeroSection = styled.section`
   width: 90%;
   margin: 0 auto;
   align-self: center;
   z-index: 1;
 `;
 
-export const StyledDescription = styled.div`
+export const Description = styled.div`
   animation: fadeInUp 0.7s ease-in-out;
 
   h1 {

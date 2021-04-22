@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const StyledContactButton = styled.button`
+export const ContactButton = styled.button`
   color: ${({ theme }) => theme.secondary};
   font-size: 1.75rem;
   display: block;
