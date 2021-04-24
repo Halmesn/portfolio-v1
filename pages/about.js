@@ -6,6 +6,7 @@ import { EmailIcon, ResumeIcon } from 'components/ui/Icons';
 import { useContext, useEffect, useRef } from 'react';
 import { useInView } from 'react-intersection-observer';
 import { useAnimation } from 'framer-motion';
+import Image from 'next/image';
 
 export default function About() {
   const setChatBotState = useContext(ChatBotContext);
@@ -68,7 +69,13 @@ export default function About() {
             }}
             ref={ref}
           >
-            <img src="/typewriter.png" alt="a cool typewriter" />
+            <Image
+              src="/typewriter.png"
+              alt="a cool typewriter"
+              width={420}
+              height={400}
+              layout="responsive"
+            />
           </Styled.Img>
         </div>
         <div className="grid-container">
@@ -158,7 +165,13 @@ export default function About() {
               hidden: { opacity: 0, y: 0 },
             }}
           >
-            <img src="/tools.png" alt="a cool rocket" />
+            <Image
+              src="/tools.png"
+              alt="a cool rocket"
+              width={400}
+              height={450}
+              layout="responsive"
+            />
           </Styled.Img>
         </div>
         <div className="grid-container" ref={inViewRef3}>
@@ -171,7 +184,13 @@ export default function About() {
               hidden: { opacity: 0, y: 0 },
             }}
           >
-            <img src="/mails.png" alt="a cool mailbox" />
+            <Image
+              src="/mails.png"
+              alt="a cool mailbox"
+              width={430}
+              height={450}
+              layout="responsive"
+            />
           </Styled.Img>
         </div>
         <div className="grid-container">

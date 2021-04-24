@@ -97,11 +97,12 @@ export const ChatHeader = styled.div`
 
   .avatar {
     border-radius: 50%;
-    border: 2px solid #fff;
-    width: 4rem;
-    height: 4rem;
-    margin-right: 1.6rem;
-    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+    border: 2px solid #fff !important;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25) !important;
+  }
+
+  .desc {
+    padding-left: 1.6rem;
   }
 
   .name,

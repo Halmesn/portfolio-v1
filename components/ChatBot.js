@@ -5,6 +5,7 @@ import { ChatbotCloseIcon } from 'components/ui/Icons';
 
 import OutsideClickHandler from 'react-outside-click-handler';
 import { useState, useRef, useEffect } from 'react';
+import Image from 'next/image';
 
 export default function ChatBot({ setChatBotState, chatBotState }) {
   const contentRef = useRef();
@@ -12,6 +13,7 @@ export default function ChatBot({ setChatBotState, chatBotState }) {
   const Delayed = ({ children }) => {
     const [isShown, setIsShown] = useState(false);
     useEffect(() => {
+      // prevent memory leaks
       let mounted = true;
       setTimeout(() => {
         if (mounted) {
@@ -75,10 +77,7 @@ export default function ChatBot({ setChatBotState, chatBotState }) {
             <p>📧 Here is my email:</p>
             <br />
             <p>
-              <a href="mailto:xiaxi.li.syd@gmail.com">
-                {' '}
-                xiaxi.li.syd@gmail.com
-              </a>
+              <a href="mailto:xiaxi.li.syd@gmail.com">xiaxi.li.syd@gmail.com</a>
             </p>
             <br />
             <p>I'm always open to job opportunities and new connections🤝!</p>
@@ -91,14 +90,14 @@ export default function ChatBot({ setChatBotState, chatBotState }) {
             <p>That's great!</p>
             <p className="mt-sm">I'm so Excited🕺!</p>
             <p>
-              Have a look at my{' '}
+              Have a look at my
               <a href="#" className="link-btn">
                 resume💾
-              </a>{' '}
+              </a>
               and let's
               <a href="mailto:xiaxi.li.syd@gmail.com" className="link-btn">
                 chat💌
-              </a>{' '}
+              </a>
               further!
             </p>
           </div>
@@ -108,17 +107,8 @@ export default function ChatBot({ setChatBotState, chatBotState }) {
         ''
       );
 
-    const onBtn1Click = () => {
-      setCurrentQuestion(1);
-    };
-    const onBtn2Click = () => {
-      setCurrentQuestion(2);
-    };
-    const onBtn3Click = () => {
-      setCurrentQuestion(3);
-    };
-    const onBtn4Click = () => {
-      setCurrentQuestion(4);
+    const onQuestionBtnClick = (questionNum) => {
+      setCurrentQuestion(questionNum);
     };
 
     return (
@@ -130,16 +120,36 @@ export default function ChatBot({ setChatBotState, chatBotState }) {
           {answer}
         </Styled.ChatAnswer>
         <Styled.ChatQuestion currentQuestion={currentQuestion}>
-          <button onClick={onBtn1Click} className="question-btn">
+          <button
+            onClick={() => {
+              onQuestionBtnClick(1);
+            }}
+            className="question-btn"
+          >
             👋 I'm good, just wanna say hi.
           </button>
-          <button onClick={onBtn2Click} className="question-btn">
+          <button
+            onClick={() => {
+              onQuestionBtnClick(2);
+            }}
+            className="question-btn"
+          >
             🎉 Fun facts about you?
           </button>
-          <button onClick={onBtn3Click} className="question-btn">
+          <button
+            onClick={() => {
+              onQuestionBtnClick(3);
+            }}
+            className="question-btn"
+          >
             💬 Others ways to contact you?
           </button>
-          <button onClick={onBtn4Click} className="question-btn">
+          <button
+            onClick={() => {
+              onQuestionBtnClick(4);
+            }}
+            className="question-btn"
+          >
             💼 I'd like to hire you!
           </button>
         </Styled.ChatQuestion>
@@ -162,8 +172,14 @@ export default function ChatBot({ setChatBotState, chatBotState }) {
     >
       <Styled.ChatBot chatBotState={chatBotState}>
         <Styled.ChatHeader>
-          <img src="/avatar.jpg" alt="Pic of Adrian" className="avatar" />
-          <div>
+          <Image
+            src="/avatar.jpg"
+            alt="Pic of Adrian"
+            width={40}
+            height={40}
+            className="avatar"
+          />
+          <div className="desc">
             <span className="name">Adrian Bot</span>
             <span className="question">Ask me a question!</span>
           </div>
