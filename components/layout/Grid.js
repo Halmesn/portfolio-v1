@@ -1,5 +1,5 @@
 import * as Styled from 'components/layout/GridStyle';
-import { GridAnimation } from 'styles/GridAnimation';
+import { GridAnimation } from 'styles/gridAnimation';
 
 import { useEffect } from 'react';
 import Link from 'next/link';
