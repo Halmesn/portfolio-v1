@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { motion } from 'framer-motion';
 
 export const HeroSection = styled.section`
   width: 90%;
@@ -7,9 +8,7 @@ export const HeroSection = styled.section`
   z-index: 1;
 `;
 
-export const Description = styled.div`
-  animation: fadeInUp 0.7s ease-in-out;
-
+export const Description = styled(motion.div)`
   h1 {
     font-size: clamp(5.6rem, 4.8vw, 9rem);
     line-height: 1.1;
@@ -29,18 +28,6 @@ export const Description = styled.div`
     line-height: 1.7;
     span {
       display: block;
-    }
-  }
-
-  @keyframes fadeInUp {
-    from {
-      opacity: 0;
-      transform: translateY(4rem);
-    }
-
-    to {
-      transform: translateY(0);
-      opacity: 1;
     }
   }
 `;
