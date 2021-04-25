@@ -1,5 +1,5 @@
 import * as Styled from 'components/layout/GridStyle';
-import { GridAnimation } from 'styles/gridAnimation';
+import { gridAnimations } from 'utilities/gridAnimation';
 
 import { useEffect } from 'react';
 import Link from 'next/link';
@@ -32,7 +32,7 @@ export default function Grid({ gridState, setGridState, chatBotState }) {
     animate8Close,
     animate9Close,
     textAnimation,
-  } = GridAnimation;
+  } = gridAnimations;
 
   useEffect(() => {
     const onMouseScroll = () => {
