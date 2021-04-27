@@ -6,7 +6,7 @@ import Link from 'next/link';
 
 import { useAnimation } from 'framer-motion';
 
-export default function Grid({ gridState, setGridState, chatBotState }) {
+export default function Grid({ gridState, setGridState }) {
   const onCloseButtonClick = () => {
     setGridState('close');
   };
@@ -35,15 +35,6 @@ export default function Grid({ gridState, setGridState, chatBotState }) {
   } = gridAnimations;
 
   useEffect(() => {
-    const onMouseScroll = () => {
-      if (chatBotState === 'open') return;
-      if (window.location.pathname === '/') {
-        setGridState('open');
-      }
-    };
-
-    window.addEventListener('wheel', onMouseScroll);
-
     if (gridState === 'open') {
       controls.start({
         opacity: 1,
@@ -59,11 +50,7 @@ export default function Grid({ gridState, setGridState, chatBotState }) {
         transition: { duration: 0.03, ease: 'easeInOut' },
       });
     }
-
-    return () => {
-      window.removeEventListener('wheel', onMouseScroll);
-    };
-  }, [gridState, chatBotState]);
+  }, [gridState]);
 
   return (
     <Styled.Grid gridState={gridState}>

@@ -32,6 +32,7 @@ export default function Layout({ children }) {
             theme={theme}
             themeToggler={themeToggler}
             gridState={gridState}
+            setGridState={setGridState}
             setChatBotState={setChatBotState}
           />
         </header>

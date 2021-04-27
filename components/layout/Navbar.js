@@ -10,6 +10,7 @@ export default function Navbar({
   themeToggler,
   theme,
   gridState,
+  setGridState,
   setChatBotState,
 }) {
   const router = useRouter();
@@ -20,7 +21,7 @@ export default function Navbar({
     <Styled.Navbar gridState={gridState} isHome={isHome}>
       <Styled.NavList>
         <li>
-          <WorkButton>Work</WorkButton>
+          <WorkButton setGridState={setGridState}>Work</WorkButton>
         </li>
         <li>
           <Styled.NavLink href="/about" rotate="1deg">
