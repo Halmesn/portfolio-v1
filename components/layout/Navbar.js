@@ -19,7 +19,7 @@ export default function Navbar({
 
   return (
     <Styled.Navbar gridState={gridState} isHome={isHome}>
-      <Styled.NavList>
+      <Styled.NavList isHome={isHome}>
         <li>
           <WorkButton setGridState={setGridState}>Work</WorkButton>
         </li>

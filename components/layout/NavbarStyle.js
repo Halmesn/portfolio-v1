@@ -47,7 +47,7 @@ export const NavList = styled.ul`
 
   .center {
     margin-left: auto;
-    transform: translateX(-1vw);
+    transform: translateX(${({ isHome }) => (isHome ? '-1.5vw' : '-1vw')});
 
     @media only screen and (max-width: 87.5em) {
       transform: translateX(0.8vw);
