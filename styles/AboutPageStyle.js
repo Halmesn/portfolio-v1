@@ -88,7 +88,7 @@ export const Container = styled.section`
       position: absolute;
       left: 50%;
       bottom: 2rem;
-      animation: bounce 1s ease infinite;
+      animation: bounce 1.2s ease infinite;
       cursor: pointer;
 
       ::before {

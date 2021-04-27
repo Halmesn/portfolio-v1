@@ -16,13 +16,13 @@ export default function About() {
   const controls = useAnimation();
 
   const [inViewRef, inView] = useInView({
-    threshold: 0.25,
+    threshold: 0.35,
   });
   const [inViewRef2, inView2] = useInView({
-    threshold: 0.25,
+    threshold: 0.35,
   });
   const [inViewRef3, inView3] = useInView({
-    threshold: 0.25,
+    threshold: 0.35,
   });
 
   useEffect(() => {
@@ -46,13 +46,14 @@ export default function About() {
       <div className="heading">
         <h2>About me</h2>
         <p>
-          Hello! My name is Adrian, I'm a
+          Hello! My name is Adrian, I'm a&nbsp;
           <span className="line">self-taught</span> front-end developer
           <br></br> living in sunny Brisbane, Australia.
         </p>
         <span
           className="scroll"
-          onClick={() => {
+          onClick={(e) => {
+            console.log(e);
             ref.current.scrollIntoView({ behavior: 'smooth', block: 'center' });
           }}
         ></span>
@@ -82,7 +83,7 @@ export default function About() {
           <Styled.Title
             animate={controls}
             initial="hidden"
-            transition={{ duration: 0.5, delay: 0.5 }}
+            transition={{ duration: 0.5, delay: 0.3 }}
             variants={{
               visible: { opacity: 1, y: -50 },
               hidden: { opacity: 0, y: 0 },
@@ -93,7 +94,7 @@ export default function About() {
           <Styled.Description
             animate={controls}
             initial="hidden"
-            transition={{ duration: 0.5, delay: 0.5 }}
+            transition={{ duration: 0.5, delay: 0.3 }}
             variants={{
               visible: { opacity: 1, y: -50 },
               hidden: { opacity: 0, y: 0 },
@@ -159,7 +160,7 @@ export default function About() {
           <Styled.Img
             animate={controls}
             initial="hidden"
-            transition={{ duration: 0.5, delay: 0.5 }}
+            transition={{ duration: 0.5, delay: 0.3 }}
             variants={{
               visible2: { opacity: 1, y: -50 },
               hidden: { opacity: 0, y: 0 },
@@ -197,7 +198,7 @@ export default function About() {
           <Styled.Title
             animate={controls}
             initial="hidden"
-            transition={{ duration: 0.5, delay: 0.5 }}
+            transition={{ duration: 0.5, delay: 0.3 }}
             variants={{
               visible3: { opacity: 1, y: -50 },
               hidden: { opacity: 0, y: 0 },
@@ -208,7 +209,7 @@ export default function About() {
           <Styled.Description
             animate={controls}
             initial="hidden"
-            transition={{ duration: 0.5, delay: 0.5 }}
+            transition={{ duration: 0.5, delay: 0.3 }}
             variants={{
               visible3: { opacity: 1, y: -50 },
               hidden: { opacity: 0, y: 0 },
