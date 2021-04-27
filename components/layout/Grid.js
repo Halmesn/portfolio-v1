@@ -1,5 +1,5 @@
 import * as Styled from 'components/layout/GridStyle';
-import { gridAnimations } from 'utilities/gridAnimation';
+import * as gridVariants from 'utilities/gridVariants';
 
 import { useEffect } from 'react';
 import Link from 'next/link';
@@ -12,44 +12,10 @@ export default function Grid({ gridState, setGridState }) {
   };
 
   const controls = useAnimation();
-  const {
-    animate1,
-    animate2,
-    animate3,
-    animate4,
-    animate5,
-    animate6,
-    animate7,
-    animate8,
-    animate9,
-    animate1Close,
-    animate2Close,
-    animate3Close,
-    animate4Close,
-    animate5Close,
-    animate6Close,
-    animate7Close,
-    animate8Close,
-    animate9Close,
-    textAnimation,
-  } = gridAnimations;
 
   useEffect(() => {
-    if (gridState === 'open') {
-      controls.start({
-        opacity: 1,
-        scaleY: [0, 1],
-        transition: { duration: 0.03, ease: 'easeInOut' },
-      });
-    }
-
-    if (gridState === 'close') {
-      controls.start({
-        opacity: 0,
-        scaleY: [0, 1],
-        transition: { duration: 0.03, ease: 'easeInOut' },
-      });
-    }
+    gridState === 'open' && controls.start('visible');
+    gridState === 'close' && controls.start('close');
   }, [gridState]);
 
   return (
@@ -60,6 +26,8 @@ export default function Grid({ gridState, setGridState }) {
           color={'#F1D3B9'}
           gridState={gridState}
           animate={controls}
+          initial="hidden"
+          variants={gridVariants.gridItem0}
         ></Styled.GridItemBg>
       </Styled.GridItem>
       <Styled.GridItem>
@@ -67,7 +35,9 @@ export default function Grid({ gridState, setGridState }) {
           pos={1}
           color={'#DF9E98'}
           gridState={gridState}
-          animate={gridState === 'open' ? animate1 : animate1Close}
+          animate={controls}
+          initial="hidden"
+          variants={gridVariants.gridItem1}
         ></Styled.GridItemBg>
       </Styled.GridItem>
       <Styled.GridItem>
@@ -75,11 +45,15 @@ export default function Grid({ gridState, setGridState }) {
           pos={2}
           color={'#fefaf6'}
           gridState={gridState}
-          animate={gridState === 'open' ? animate2 : animate2Close}
+          animate={controls}
+          initial="hidden"
+          variants={gridVariants.gridItem2}
         ></Styled.GridItemBg>
         <div className="grid__item-content btn">
           <Styled.GridItemInner
-            animate={gridState === 'open' ? textAnimation : null}
+            animate={controls}
+            initial="hidden"
+            variants={gridVariants.gridText}
           >
             <button onClick={onCloseButtonClick} className="menu-trigger">
               - close
@@ -92,7 +66,9 @@ export default function Grid({ gridState, setGridState }) {
           pos={3}
           color={'#9ED4D4'}
           gridState={gridState}
-          animate={gridState === 'open' ? animate3 : animate3Close}
+          animate={controls}
+          initial="hidden"
+          variants={gridVariants.gridItem3}
         ></Styled.GridItemBg>
       </Styled.GridItem>
       <Styled.GridItem>
@@ -100,12 +76,16 @@ export default function Grid({ gridState, setGridState }) {
           pos={4}
           color={'#232320'}
           gridState={gridState}
-          animate={gridState === 'open' ? animate4 : animate4Close}
+          animate={controls}
+          initial="hidden"
+          variants={gridVariants.gridItem4}
         ></Styled.GridItemBg>
         <Link href="/" passHref>
           <a className="grid__link grid__item-content home">
             <Styled.GridItemInner
-              animate={gridState === 'open' ? textAnimation : null}
+              animate={controls}
+              initial="hidden"
+              variants={gridVariants.gridText}
             >
               <h3 onClick={onCloseButtonClick} className="grid__item-title ">
                 Home
@@ -118,13 +98,17 @@ export default function Grid({ gridState, setGridState }) {
         <Styled.GridItemBg
           pos={5}
           gridState={gridState}
-          animate={gridState === 'open' ? animate5 : animate5Close}
+          animate={controls}
+          initial="hidden"
+          variants={gridVariants.gridItem5}
         ></Styled.GridItemBg>
         <Link href="/work/project5" passHref>
           <a className="grid__link grid__item-content">
             <Styled.GridItemInner
               onClick={onCloseButtonClick}
-              animate={gridState === 'open' ? textAnimation : null}
+              animate={controls}
+              initial="hidden"
+              variants={gridVariants.gridText}
             >
               <h3 className="grid__item-title">venue</h3>
               <span className="grid__item-desc">One place for all.</span>
@@ -136,13 +120,17 @@ export default function Grid({ gridState, setGridState }) {
         <Styled.GridItemBg
           pos={6}
           gridState={gridState}
-          animate={gridState === 'open' ? animate6 : animate6Close}
+          animate={controls}
+          initial="hidden"
+          variants={gridVariants.gridItem6}
         ></Styled.GridItemBg>
         <Link href="/work/project4" passHref>
           <a className="grid__link grid__item-content">
             <Styled.GridItemInner
               onClick={onCloseButtonClick}
-              animate={gridState === 'open' ? textAnimation : null}
+              animate={controls}
+              initial="hidden"
+              variants={gridVariants.gridText}
             >
               <h3 className="grid__item-title">sponsors</h3>
               <span className="grid__item-desc">Find out who supports us.</span>
@@ -154,13 +142,17 @@ export default function Grid({ gridState, setGridState }) {
         <Styled.GridItemBg
           pos={7}
           gridState={gridState}
-          animate={gridState === 'open' ? animate7 : animate7Close}
+          animate={controls}
+          initial="hidden"
+          variants={gridVariants.gridItem7}
         ></Styled.GridItemBg>
         <Link href="/work/project3" passHref>
           <a className="grid__link grid__item-content">
             <Styled.GridItemInner
               onClick={onCloseButtonClick}
-              animate={gridState === 'open' ? textAnimation : null}
+              animate={controls}
+              initial="hidden"
+              variants={gridVariants.gridText}
             >
               <h3 className="grid__item-title">tickets</h3>
               <span className="grid__item-desc">Get the right ticket</span>
@@ -172,13 +164,17 @@ export default function Grid({ gridState, setGridState }) {
         <Styled.GridItemBg
           pos={8}
           gridState={gridState}
-          animate={gridState === 'open' ? animate8 : animate8Close}
+          animate={controls}
+          initial="hidden"
+          variants={gridVariants.gridItem8}
         ></Styled.GridItemBg>
         <Link href="/work/project2" passHref>
           <a className="grid__link grid__item-content">
             <Styled.GridItemInner
               onClick={onCloseButtonClick}
-              animate={gridState === 'open' ? textAnimation : null}
+              animate={controls}
+              initial="hidden"
+              variants={gridVariants.gridText}
             >
               <h3 className="grid__item-title">speakers</h3>
               <span className="grid__item-desc">
@@ -192,13 +188,17 @@ export default function Grid({ gridState, setGridState }) {
         <Styled.GridItemBg
           pos={9}
           gridState={gridState}
-          animate={gridState === 'open' ? animate9 : animate9Close}
+          animate={controls}
+          initial="hidden"
+          variants={gridVariants.gridItem9}
         ></Styled.GridItemBg>
         <Link href="/work/project1" passHref>
           <a className="grid__link grid__item-content">
             <Styled.GridItemInner
               onClick={onCloseButtonClick}
-              animate={gridState === 'open' ? textAnimation : null}
+              animate={controls}
+              initial="hidden"
+              variants={gridVariants.gridText}
             >
               <h3 className="grid__item-title">schedule</h3>
               <span className="grid__item-desc">

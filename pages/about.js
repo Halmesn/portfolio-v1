@@ -52,8 +52,7 @@ export default function About() {
         </p>
         <span
           className="scroll"
-          onClick={(e) => {
-            console.log(e);
+          onClick={() => {
             ref.current.scrollIntoView({ behavior: 'smooth', block: 'center' });
           }}
         ></span>
