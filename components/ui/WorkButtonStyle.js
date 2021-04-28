@@ -1,41 +1,9 @@
 import styled from 'styled-components';
 import Link from 'next/link';
+import { navBtn } from 'styles/Mixins';
 
 export const WorkButton = styled.button`
-  color: ${({ theme }) => theme.secondary};
-  font-size: 1.75rem;
-  display: block;
-  padding: 2.5rem 3.5rem;
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-  position: relative;
-
-  @media only screen and (max-width: 42.5em) {
-    padding: 2.5rem 1.5vw;
-  }
-
-  @media only screen and (max-width: 25em) {
-    padding: 2.5rem 4vw;
-  }
-
-  span {
-    position: relative;
-    display: flex;
-    align-items: center;
-
-    ::after {
-      content: '';
-      width: 100%;
-      height: 3px;
-      position: absolute;
-      opacity: 0;
-      background-color: ${({ theme }) => theme.dropdownLine};
-      bottom: -1rem;
-      left: 0;
-      transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    }
-  }
+  ${navBtn}
 
   &:hover,
   &:focus-within {
@@ -71,14 +39,6 @@ export const DropdownMenu = styled.ul`
   transform-origin: top center;
   opacity: 0.3;
   transition: 280ms all 120ms ease-out;
-
-  @media only screen and (max-width: 42.5em) {
-    left: calc(50% + 1rem);
-  }
-
-  @media only screen and (max-width: 31.2em) {
-    left: calc(50% + 2rem);
-  }
 
   li {
     margin-top: 0.8rem;

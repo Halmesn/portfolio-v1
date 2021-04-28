@@ -35,10 +35,6 @@ export const ThemeToggler = styled.div`
     }
   }
 
-  @media only screen and (max-width: 25em) {
-    margin-right: 1rem;
-  }
-
   .power-switch {
     --color: ${({ theme }) => theme.secondary};
     width: 3.5rem;

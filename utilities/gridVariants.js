@@ -73,7 +73,7 @@ export const gridText = {
     opacity: 0,
     y: 100,
     transition: {
-      duration: 1,
+      duration: 0.5,
       ease: 'linear',
     },
   },
