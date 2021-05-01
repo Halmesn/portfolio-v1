@@ -12,8 +12,8 @@ export default function WorkButton({ children, setGridState }) {
       </span>
       <Styled.DropdownMenu id="work-dropdown">
         <li>
-          <Styled.DropDownLink href="/work/project1">
-            Project1
+          <Styled.DropDownLink href="/work/Nextflix">
+            Nextflix
           </Styled.DropDownLink>
         </li>
         <li>

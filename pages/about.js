@@ -150,8 +150,8 @@ export default function About() {
             <p>The following are things I'm planning to learn this year:</p>
             <ul className="skills">
               <li>TypeScript</li>
-              <li>React Design Pattern</li>
-              <li>React Animations</li>
+              <li>Advanced React Patterns</li>
+              <li>React Testing</li>
             </ul>
           </Styled.Description>
         </div>
