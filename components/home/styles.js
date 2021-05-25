@@ -8,6 +8,7 @@ export const Hero = styled.section`
   margin: 0 auto;
   align-self: center;
   z-index: 1;
+  margin-top: 30rem;
 
   @media (max-width: 26.5625em) {
     align-self: start;
