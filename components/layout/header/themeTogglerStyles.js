@@ -3,6 +3,10 @@ import styled from 'styled-components';
 export const ThemeToggler = styled.div`
   transform: translate(1rem, -2px);
 
+  @media (max-width: 53.125em) {
+    margin-left: auto;
+  }
+
   @keyframes line-animation {
     0% {
       transform: translateY(0);

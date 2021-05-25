@@ -23,7 +23,7 @@ export default function Layout({ children }) {
   const [chatBotState, setChatBotState] = useState('close');
 
   return (
-    <ChatBotContext.Provider value={setChatBotState}>
+    <ChatBotContext.Provider value={{ setChatBotState, theme }}>
       <ThemeProvider theme={theme === 'light' ? lightTheme : darkTheme}>
         <GlobalStyles />
         {url === '/' ? <Birds theme={theme} /> : null}

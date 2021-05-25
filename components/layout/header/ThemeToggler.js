@@ -1,4 +1,5 @@
 import * as styled from './themeTogglerStyles';
+
 import { useState } from 'react';
 
 export default function ThemeToggler({ themeToggler }) {

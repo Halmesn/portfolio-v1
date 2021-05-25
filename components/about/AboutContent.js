@@ -8,7 +8,7 @@ import { useAnimation } from 'framer-motion';
 import Image from 'next/image';
 
 export default function AboutContent() {
-  const setChatBotState = useContext(ChatBotContext);
+  const { setChatBotState } = useContext(ChatBotContext);
 
   const ref = useRef();
 

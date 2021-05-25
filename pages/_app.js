@@ -1,6 +1,7 @@
 import 'styles/font.css';
 
 import Layout from 'components/layout/Layout';
+import { ViewportProvider } from 'hooks/useViewport';
 
 import Head from 'next/head';
 
@@ -31,9 +32,11 @@ function MyApp({ Component, pageProps }) {
         <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
       </Head>
 
-      <Layout>
-        <Component {...pageProps} />
-      </Layout>
+      <ViewportProvider>
+        <Layout>
+          <Component {...pageProps} />
+        </Layout>
+      </ViewportProvider>
     </>
   );
 }

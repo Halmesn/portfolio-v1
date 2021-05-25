@@ -24,18 +24,32 @@ export const NavList = styled.ul`
   list-style: none;
   width: 90%;
   margin: 0 auto;
+
+  @media (max-width: 53.125em) {
+  }
 `;
 
 export const LinkWrapper = styled.li`
-  &.projects {
+  &.project {
     a {
       padding-left: 0;
     }
   }
 
+  &.contact {
+    @media (max-width: 26.5625em) {
+      display: none;
+    }
+  }
+
   &.logo {
-    margin-left: auto;
-    transform: translateX(${({ isHome }) => (isHome ? '-1.5vw' : '-1vw')});
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+
+    @media (max-width: 53.125em) {
+      display: none;
+    }
 
     a {
       padding: 0;
