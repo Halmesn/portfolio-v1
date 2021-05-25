@@ -11,7 +11,7 @@ export const Hero = styled.section`
 
   @media (max-width: 26.5625em) {
     align-self: start;
-    margin-top: 15rem;
+    margin-top: 5rem;
   }
 `;
 
