@@ -87,7 +87,7 @@ export default function Navbar({
             </styled.LinkWrapper>
           </>
         )}
-        <ThemeToggler themeToggler={themeToggler} />
+        {width && <ThemeToggler themeToggler={themeToggler} />}
       </styled.NavList>
     </styled.Navbar>
   );
