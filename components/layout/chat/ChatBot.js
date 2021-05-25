@@ -1,4 +1,4 @@
-import * as Styled from './styles';
+import * as styled from './styles';
 
 import TypingBubble from 'components/layout/chat/TypingBubble';
 
@@ -112,13 +112,13 @@ export default function ChatBot({ setChatBotState, chatBotState }) {
 
     return (
       <>
-        <Styled.ChatAnswer currentQuestion={currentQuestion}>
+        <styled.ChatAnswer currentQuestion={currentQuestion}>
           <div tabIndex="-1" className="user">
             {question}
           </div>
           {answer}
-        </Styled.ChatAnswer>
-        <Styled.ChatQuestion currentQuestion={currentQuestion}>
+        </styled.ChatAnswer>
+        <styled.ChatQuestion currentQuestion={currentQuestion}>
           <button
             onClick={() => {
               onQuestionBtnClick(1);
@@ -151,7 +151,7 @@ export default function ChatBot({ setChatBotState, chatBotState }) {
           >
             💼 I'd like to hire you!
           </button>
-        </Styled.ChatQuestion>
+        </styled.ChatQuestion>
       </>
     );
   };
@@ -169,8 +169,8 @@ export default function ChatBot({ setChatBotState, chatBotState }) {
         setCurrentQuestion(0);
       }}
     >
-      <Styled.ChatBot chatBotState={chatBotState}>
-        <Styled.ChatHeader>
+      <styled.ChatBot chatBotState={chatBotState}>
+        <styled.ChatHeader>
           <Image
             src="/images/misc/avatar.jpg"
             alt="Pic of Adrian"
@@ -185,12 +185,12 @@ export default function ChatBot({ setChatBotState, chatBotState }) {
 
           <div className="align-left">
             <button className="close-btn" onClick={onCloseBtnClick}>
-              <Styled.CloseIcon />
+              <styled.CloseIcon />
             </button>
           </div>
-        </Styled.ChatHeader>
+        </styled.ChatHeader>
 
-        <Styled.ChatContent>
+        <styled.ChatContent>
           <div className="agent">Hello! My name is Adrian Bot 🤖</div>
 
           <div className="agent">
@@ -203,8 +203,8 @@ export default function ChatBot({ setChatBotState, chatBotState }) {
             currentQuestion={currentQuestion}
             setCurrentQuestion={setCurrentQuestion}
           />
-        </Styled.ChatContent>
-      </Styled.ChatBot>
+        </styled.ChatContent>
+      </styled.ChatBot>
     </OutsideClickHandler>
   );
 }
