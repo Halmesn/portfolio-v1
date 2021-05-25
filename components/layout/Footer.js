@@ -1,7 +1,6 @@
 import * as Styled from 'components/layout/FooterStyle';
 
-import ChatBot from 'components/ChatBot';
-import { ChatButtonIcon } from 'components/ui/Icons';
+import ChatBot from 'components/layout/chat/ChatBot';
 
 export default function Footer({
   theme,
@@ -27,7 +26,7 @@ export default function Footer({
         onClick={onChatBotButtonClick}
         chatBotState={chatBotState}
       >
-        <ChatButtonIcon theme={theme} />
+        <Styled.ChatBotIcon theme={theme} />
       </Styled.ChatButton>
       <ChatBot chatBotState={chatBotState} setChatBotState={setChatBotState} />
     </Styled.Footer>

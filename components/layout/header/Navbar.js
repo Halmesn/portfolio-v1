@@ -1,8 +1,8 @@
-import * as Styled from 'components/layout/NavbarStyle';
+import * as Styled from 'components/layout/header/NavbarStyle';
 
-import WorkButton from 'components/ui/WorkButton';
-import ContactButton from 'components/ui/ContactButton';
-import ThemeToggler from 'components/ui/ThemeToggler';
+import WorkButton from 'components/layout/header/WorkButton';
+import ContactButton from 'components/layout/header/ContactButton';
+import ThemeToggler from 'components/layout/header/ThemeToggler';
 
 import { useRouter } from 'next/router';
 
@@ -36,7 +36,11 @@ export default function Navbar({
         <li className="center">
           <Styled.NavLink href="/" className="no-pd">
             <Styled.Logo
-              src={`${theme === 'light' ? '/logo.svg' : '/logo-dark.svg'}`}
+              src={`${
+                theme === 'light'
+                  ? '/images/brand/logo.svg'
+                  : '/images/brand/logo-dark.svg'
+              }`}
               alt="logo"
             />
           </Styled.NavLink>

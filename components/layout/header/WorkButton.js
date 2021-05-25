@@ -1,4 +1,4 @@
-import * as Styled from 'components/ui/WorkButtonStyle';
+import * as Styled from 'components/layout/header/WorkButtonStyle';
 
 export default function WorkButton({ children, setGridState }) {
   return (

@@ -21,7 +21,7 @@ html {
 
 body {
   background-color: ${({ theme }) => theme.primary};
-  font-family: 'Biotif';
+  font-family: 'Biotif', Helvetica, Arial, sans-serif;;
   transition: all .5s linear;
 }
 

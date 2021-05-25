@@ -1,11 +1,10 @@
-import * as Styled from 'components/ChatBotStyle';
+import * as Styled from './styles';
 
-import TypingBubble from 'components/ui/TypingBubble';
-import { ChatbotCloseIcon } from 'components/ui/Icons';
+import TypingBubble from 'components/layout/chat/TypingBubble';
 
-import OutsideClickHandler from 'react-outside-click-handler';
 import { useState, useRef, useEffect } from 'react';
 import Image from 'next/image';
+import OutsideClickHandler from 'react-outside-click-handler';
 
 export default function ChatBot({ setChatBotState, chatBotState }) {
   const contentRef = useRef();
@@ -173,7 +172,7 @@ export default function ChatBot({ setChatBotState, chatBotState }) {
       <Styled.ChatBot chatBotState={chatBotState}>
         <Styled.ChatHeader>
           <Image
-            src="/avatar.jpg"
+            src="/images/misc/avatar.jpg"
             alt="Pic of Adrian"
             width={40}
             height={40}
@@ -186,7 +185,7 @@ export default function ChatBot({ setChatBotState, chatBotState }) {
 
           <div className="align-left">
             <button className="close-btn" onClick={onCloseBtnClick}>
-              <ChatbotCloseIcon />
+              <Styled.CloseIcon />
             </button>
           </div>
         </Styled.ChatHeader>

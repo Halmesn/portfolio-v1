@@ -62,6 +62,7 @@ export const DropDownLink = styled(StyledLink)`
   &:hover {
     .link::after {
       transform: scale3d(1.2, 1.2, 1.2);
+      background-color: ${({ theme }) => theme.dropdownLine};
     }
   }
 `;

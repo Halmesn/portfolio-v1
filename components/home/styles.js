@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 
-export const HeroSection = styled.section`
+export const Hero = styled.section`
   width: 90%;
   margin: 0 auto;
   align-self: center;
@@ -31,3 +31,12 @@ export const Description = styled(motion.div)`
     }
   }
 `;
+
+export const descriptionVariants = {
+  hidden: { y: 40, opacity: 0 },
+  visible: {
+    y: 0,
+    opacity: 1,
+    transition: { duration: 0.6, ease: 'easeInOut' },
+  },
+};

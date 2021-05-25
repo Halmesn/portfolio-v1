@@ -1,4 +1,4 @@
-import 'styles/fonts/fonts.css';
+import 'styles/font.css';
 
 import Layout from 'components/layout/Layout';
 
@@ -8,26 +8,26 @@ function MyApp({ Component, pageProps }) {
   return (
     <>
       <Head>
-        <title>Adrian Li | Front-end Developer | Work</title>
+        <title>Adrian Li | React / JavaScript Front End Developer</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link
           rel="apple-touch-icon"
           sizes="180x180"
-          href="/favicons/apple-touch-icon.png"
+          href="/images/favicons/apple-touch-icon.png"
         />
         <link
           rel="icon"
           type="image/png"
           sizes="32x32"
-          href="/favicons/favicon-32x32.png"
+          href="/images/favicons/favicon-32x32.png"
         />
         <link
           rel="icon"
           type="image/png"
           sizes="16x16"
-          href="/favicons/favicon-16x16.png"
+          href="/images/favicons/favicon-16x16.png"
         />
-        <link rel="manifest" href="/favicons/site.webmanifest" />
+        <link rel="manifest" href="/images/favicons/site.webmanifest" />
         <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
       </Head>
 

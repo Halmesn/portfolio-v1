@@ -26,7 +26,7 @@ export const Birds = React.memo((props) => {
   if (vantaEffect && props.theme === 'dark') {
     vantaEffect.setOptions({
       backgroundColor: '#0a192f',
-      color1: 0x4f3737,
+      color1: 0x232e74,
     });
     vantaEffect.restart();
   }

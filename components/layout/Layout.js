@@ -2,8 +2,8 @@ import { ThemeProvider } from 'styled-components';
 import { GlobalStyles } from 'styles/GlobalStyle';
 import { lightTheme, darkTheme } from 'styles/Themes';
 
-import Navbar from 'components/layout/Navbar';
-import { Birds } from 'components/Birds';
+import Navbar from 'components/layout/header/Navbar';
+import { Birds } from 'components/home/Birds';
 import Footer from 'components/layout/Footer';
 import Grid from 'components/layout/Grid';
 

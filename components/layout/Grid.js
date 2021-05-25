@@ -1,5 +1,5 @@
 import * as Styled from 'components/layout/GridStyle';
-import * as gridVariants from 'utilities/gridVariants';
+import * as gridVariants from 'helpers/gridHelpers';
 
 import { useEffect } from 'react';
 import Link from 'next/link';

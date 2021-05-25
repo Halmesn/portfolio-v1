@@ -211,3 +211,79 @@ export const ChatQuestion = styled(motion.div)`
     }
   }
 `;
+
+export const TypingBubble = styled.div`
+  background-color: #fff6eb;
+  padding: 1.6rem 2.8rem;
+  border-radius: 2rem;
+  border-bottom-left-radius: 2px;
+  margin-top: 1.2rem;
+  width: 30%;
+
+  .typing {
+    align-items: center;
+    display: flex;
+    height: 1.7rem;
+
+    .dot {
+      animation: TypingAnimation 1s infinite ease-in-out;
+      background-color: #ffdfb9;
+      border-radius: 50%;
+      height: 0.7rem;
+      margin-right: 4px;
+      vertical-align: middle;
+      width: 0.7rem;
+      display: inline-block;
+
+      :nth-child(1) {
+        animation-delay: 200ms;
+      }
+
+      :nth-child(2) {
+        animation-delay: 300ms;
+      }
+
+      :nth-child(3) {
+        animation-delay: 400ms;
+      }
+
+      :last-child {
+        margin-right: 0;
+      }
+    }
+  }
+
+  @keyframes TypingAnimation {
+    0% {
+      transform: translateY(0px);
+      background-color: #ffdfb9; // rgba(20,105,69,.7);
+    }
+    28% {
+      transform: translateY(-7px);
+      background-color: #ffc988; //rgba(20,105,69,.4);
+    }
+    44% {
+      transform: translateY(0px);
+      background-color: #feb254; //rgba(20,105,69,.2);
+    }
+  }
+`;
+
+export const CloseIcon = () => {
+  return (
+    <svg
+      width="12"
+      height="12"
+      viewBox="0 0 12 12"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        fillRule="evenodd"
+        clipRule="evenodd"
+        d="M7.41425 6.00025L11.7072 1.70725C12.0982 1.31625 12.0982 0.68425 11.7072 0.29325C11.3162 -0.09775 10.6843 -0.09775 10.2933 0.29325L6.00025 4.58625L1.70725 0.29325C1.31625 -0.09775 0.68425 -0.09775 0.29325 0.29325C-0.09775 0.68425 -0.09775 1.31625 0.29325 1.70725L4.58625 6.00025L0.29325 10.2933C-0.09775 10.6843 -0.09775 11.3162 0.29325 11.7072C0.48825 11.9022 0.74425 12.0002 1.00025 12.0002C1.25625 12.0002 1.51225 11.9022 1.70725 11.7072L6.00025 7.41425L10.2933 11.7072C10.4883 11.9022 10.7442 12.0002 11.0002 12.0002C11.2562 12.0002 11.5122 11.9022 11.7072 11.7072C12.0982 11.3162 12.0982 10.6843 11.7072 10.2933L7.41425 6.00025Z"
+        fill="white"
+      ></path>
+    </svg>
+  );
+};
