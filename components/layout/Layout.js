@@ -36,7 +36,7 @@ export default function Layout({ children }) {
             setChatBotState={setChatBotState}
           />
         </header>
-        <main style={{ zIndex: 1, height: '100vh', display: 'grid' }}>
+        <main style={{ zIndex: 1, height: '100%', display: 'grid' }}>
           {children}
           <Grid
             gridState={gridState}
