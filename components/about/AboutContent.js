@@ -229,7 +229,7 @@ export default function AboutContent() {
               </styled.Button>
               <styled.Button>
                 <a href="#">
-                  <Styled.ResumeIcon />
+                  <styled.ResumeIcon />
                   Resume
                 </a>
               </styled.Button>

@@ -4,7 +4,7 @@ import { lightTheme, darkTheme } from 'styles/Themes';
 
 import Navbar from 'components/layout/header/Navbar';
 import { Birds } from 'components/home/Birds';
-import Footer from 'components/layout/Footer';
+import Footer from 'components/layout/footer/Footer';
 import Grid from 'components/layout/Grid';
 
 import { useDarkMode } from 'hooks/useDarkMode';

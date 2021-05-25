@@ -1,6 +1,6 @@
 import * as styled from './styles';
 
-import TypingBubble from 'components/layout/chat/TypingBubble';
+import TypingBubble from 'components/layout/footer/TypingBubble';
 
 import { useState, useRef, useEffect } from 'react';
 import Image from 'next/image';
