@@ -1,4 +1,4 @@
-import * as Styled from 'components/layout/header/ThemeTogglerStyle';
+import * as styled from './themeTogglerStyles';
 import { useState } from 'react';
 
 export default function ThemeToggler({ themeToggler }) {
@@ -9,7 +9,7 @@ export default function ThemeToggler({ themeToggler }) {
   };
 
   return (
-    <Styled.ThemeToggler>
+    <styled.ThemeToggler>
       <div className="power-switch">
         <input
           type="checkbox"
@@ -44,6 +44,6 @@ export default function ThemeToggler({ themeToggler }) {
           <circle cx="75" cy="80" r="35" />
         </symbol>
       </svg>
-    </Styled.ThemeToggler>
+    </styled.ThemeToggler>
   );
 }

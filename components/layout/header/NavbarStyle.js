@@ -24,29 +24,29 @@ export const NavList = styled.ul`
   list-style: none;
   width: 90%;
   margin: 0 auto;
+`;
 
-  .no-pd {
-    padding: 0;
-
-    span::after {
-      display: none;
+export const LinkWrapper = styled.li`
+  &.projects {
+    a {
+      padding-left: 0;
     }
   }
 
-  .sm-left-pd {
-    padding-left: 1rem;
-  }
-
-  .sm-right-pd {
-    padding-right: 1rem;
-  }
-
-  .center {
+  &.logo {
     margin-left: auto;
     transform: translateX(${({ isHome }) => (isHome ? '-1.5vw' : '-1vw')});
+
+    a {
+      padding: 0;
+
+      span::after {
+        display: none;
+      }
+    }
   }
 
-  .align-left {
+  &.github {
     margin-left: auto;
   }
 `;
@@ -66,27 +66,24 @@ export const NavLink = styled(StyledLink)`
 
   span {
     position: relative;
-  }
 
-  .about {
-  }
-
-  span::after {
-    content: '';
-    width: 100%;
-    height: 3px;
-    position: absolute;
-    opacity: 0;
-    background-color: ${({ theme }) => theme.line};
-    bottom: -1rem;
-    left: 0;
-    transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    ::after {
+      content: '';
+      width: 100%;
+      height: 3px;
+      position: absolute;
+      opacity: 0;
+      background-color: ${({ theme }) => theme.line};
+      bottom: -1rem;
+      left: 0;
+      transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
   }
 
   &:hover {
     span::after {
       opacity: 1;
-      transform: translateZ(0) scale3d(1.1, 1.1, 1.1)
+      transform: translateZ(0) scale(1.1)
         rotate(${({ rotate }) => rotate || '2deg'});
     }
   }
