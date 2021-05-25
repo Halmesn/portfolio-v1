@@ -1,11 +1,7 @@
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 
-import {
-  LinkWrapper as ReuseLinkWrapper,
-  NavLink as ReuseNavLink,
-  Icon as ReuseIcon,
-} from 'components/layout/header/navbarStyles';
+import { Icon as ReuseIcon } from 'components/layout/header/navbarStyles';
 
 export const Hero = styled.section`
   width: 90%;

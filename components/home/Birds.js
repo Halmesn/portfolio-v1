@@ -42,7 +42,7 @@ export const Birds = React.memo((props) => {
     <div
       ref={myRef}
       style={{
-        height: '100vh',
+        height: '100%',
         position: 'fixed',
         width: '100%',
         top: '0',
