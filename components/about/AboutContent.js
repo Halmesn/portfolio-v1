@@ -222,7 +222,7 @@ export default function AboutContent() {
             </p>
             <div className="buttons">
               <styled.Button>
-                <a href="mailto:xiaxi.li.syd@gmail.com">
+                <a href="mailto:adrian.li.dev@gmail.com">
                   <styled.EmailIcon />
                   Email
                 </a>

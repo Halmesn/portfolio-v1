@@ -76,7 +76,9 @@ export default function ChatBot({ setChatBotState, chatBotState }) {
             <p>📧 Here is my email:</p>
             <br />
             <p>
-              <a href="mailto:xiaxi.li.syd@gmail.com">xiaxi.li.syd@gmail.com</a>
+              <a href="mailto:adrian.li.dev@gmail.com">
+                adrian.li.dev@gmail.com
+              </a>
             </p>
             <br />
             <p>I'm always open to job opportunities and new connections🤝!</p>
@@ -94,7 +96,7 @@ export default function ChatBot({ setChatBotState, chatBotState }) {
                 resume💾
               </a>
               and let's
-              <a href="mailto:xiaxi.li.syd@gmail.com" className="link-btn">
+              <a href="mailto:adrian.li.dev@gmail.com" className="link-btn">
                 chat💌
               </a>
               further!
