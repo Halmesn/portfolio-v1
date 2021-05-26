@@ -110,8 +110,8 @@ export default function Grid({ gridState, setGridState }) {
               initial="hidden"
               variants={gridVariants.gridText}
             >
-              <h3 className="grid__item-title">venue</h3>
-              <span className="grid__item-desc">One place for all.</span>
+              <h3 className="grid__item-title">project</h3>
+              <span className="grid__item-desc">Under Construction</span>
             </Styled.GridItemInner>
           </a>
         </Link>
@@ -132,8 +132,8 @@ export default function Grid({ gridState, setGridState }) {
               initial="hidden"
               variants={gridVariants.gridText}
             >
-              <h3 className="grid__item-title">sponsors</h3>
-              <span className="grid__item-desc">Find out who supports us.</span>
+              <h3 className="grid__item-title">project</h3>
+              <span className="grid__item-desc">Under Construction</span>
             </Styled.GridItemInner>
           </a>
         </Link>
@@ -154,8 +154,8 @@ export default function Grid({ gridState, setGridState }) {
               initial="hidden"
               variants={gridVariants.gridText}
             >
-              <h3 className="grid__item-title">tickets</h3>
-              <span className="grid__item-desc">Get the right ticket</span>
+              <h3 className="grid__item-title">project</h3>
+              <span className="grid__item-desc">Under Construction</span>
             </Styled.GridItemInner>
           </a>
         </Link>
@@ -176,10 +176,8 @@ export default function Grid({ gridState, setGridState }) {
               initial="hidden"
               variants={gridVariants.gridText}
             >
-              <h3 className="grid__item-title">speakers</h3>
-              <span className="grid__item-desc">
-                Smart people. All in one place.
-              </span>
+              <h3 className="grid__item-title">project</h3>
+              <span className="grid__item-desc">Under Construction</span>
             </Styled.GridItemInner>
           </a>
         </Link>
@@ -200,9 +198,9 @@ export default function Grid({ gridState, setGridState }) {
               initial="hidden"
               variants={gridVariants.gridText}
             >
-              <h3 className="grid__item-title">schedule</h3>
+              <h3 className="grid__item-title">Hotflix</h3>
               <span className="grid__item-desc">
-                When the time is right, you'll learn.
+                A project that got 3.4k upvotes on Reddit.
               </span>
             </Styled.GridItemInner>
           </a>
