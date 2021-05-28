@@ -1,8 +1,9 @@
-import * as Styled from 'components/layout/GridStyle';
+import * as styled from 'components/layout/gridStyles';
 import * as gridVariants from 'helpers/gridHelpers';
 
 import { useEffect } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 import { useAnimation } from 'framer-motion';
 
@@ -19,38 +20,38 @@ export default function Grid({ gridState, setGridState }) {
   }, [gridState]);
 
   return (
-    <Styled.Grid gridState={gridState}>
-      <Styled.GridItem>
-        <Styled.GridItemBg
+    <styled.Grid gridState={gridState}>
+      <styled.GridItem>
+        <styled.GridItemBg
           pos={0}
           color={'#F1D3B9'}
           gridState={gridState}
           animate={controls}
           initial="hidden"
           variants={gridVariants.gridItem0}
-        ></Styled.GridItemBg>
-      </Styled.GridItem>
-      <Styled.GridItem>
-        <Styled.GridItemBg
+        ></styled.GridItemBg>
+      </styled.GridItem>
+      <styled.GridItem>
+        <styled.GridItemBg
           pos={1}
           color={'#DF9E98'}
           gridState={gridState}
           animate={controls}
           initial="hidden"
           variants={gridVariants.gridItem1}
-        ></Styled.GridItemBg>
-      </Styled.GridItem>
-      <Styled.GridItem>
-        <Styled.GridItemBg
+        ></styled.GridItemBg>
+      </styled.GridItem>
+      <styled.GridItem>
+        <styled.GridItemBg
           pos={2}
           color={'#fefaf6'}
           gridState={gridState}
           animate={controls}
           initial="hidden"
           variants={gridVariants.gridItem2}
-        ></Styled.GridItemBg>
+        ></styled.GridItemBg>
         <div className="grid__item-content btn">
-          <Styled.GridItemInner
+          <styled.GridItemInner
             animate={controls}
             initial="hidden"
             variants={gridVariants.gridText}
@@ -58,31 +59,31 @@ export default function Grid({ gridState, setGridState }) {
             <button onClick={onCloseButtonClick} className="menu-trigger">
               - close
             </button>
-          </Styled.GridItemInner>
+          </styled.GridItemInner>
         </div>
-      </Styled.GridItem>
-      <Styled.GridItem>
-        <Styled.GridItemBg
+      </styled.GridItem>
+      <styled.GridItem>
+        <styled.GridItemBg
           pos={3}
           color={'#9ED4D4'}
           gridState={gridState}
           animate={controls}
           initial="hidden"
           variants={gridVariants.gridItem3}
-        ></Styled.GridItemBg>
-      </Styled.GridItem>
-      <Styled.GridItem>
-        <Styled.GridItemBg
+        ></styled.GridItemBg>
+      </styled.GridItem>
+      <styled.GridItem>
+        <styled.GridItemBg
           pos={4}
           color={'#232320'}
           gridState={gridState}
           animate={controls}
           initial="hidden"
           variants={gridVariants.gridItem4}
-        ></Styled.GridItemBg>
+        ></styled.GridItemBg>
         <Link href="/" passHref>
           <a className="grid__link grid__item-content home">
-            <Styled.GridItemInner
+            <styled.GridItemInner
               animate={controls}
               initial="hidden"
               variants={gridVariants.gridText}
@@ -90,21 +91,21 @@ export default function Grid({ gridState, setGridState }) {
               <h3 onClick={onCloseButtonClick} className="grid__item-title ">
                 Home
               </h3>
-            </Styled.GridItemInner>
+            </styled.GridItemInner>
           </a>
         </Link>
-      </Styled.GridItem>
-      <Styled.GridItem>
-        <Styled.GridItemBg
+      </styled.GridItem>
+      <styled.GridItem>
+        <styled.GridItemBg
           pos={5}
           gridState={gridState}
           animate={controls}
           initial="hidden"
           variants={gridVariants.gridItem5}
-        ></Styled.GridItemBg>
-        <Link href="/work/project5" passHref>
+        ></styled.GridItemBg>
+        <Link href="#" passHref>
           <a className="grid__link grid__item-content">
-            <Styled.GridItemInner
+            <styled.GridItemInner
               onClick={onCloseButtonClick}
               animate={controls}
               initial="hidden"
@@ -112,21 +113,21 @@ export default function Grid({ gridState, setGridState }) {
             >
               <h3 className="grid__item-title">project</h3>
               <span className="grid__item-desc">Under Construction</span>
-            </Styled.GridItemInner>
+            </styled.GridItemInner>
           </a>
         </Link>
-      </Styled.GridItem>
-      <Styled.GridItem>
-        <Styled.GridItemBg
+      </styled.GridItem>
+      <styled.GridItem>
+        <styled.GridItemBg
           pos={6}
           gridState={gridState}
           animate={controls}
           initial="hidden"
           variants={gridVariants.gridItem6}
-        ></Styled.GridItemBg>
-        <Link href="/work/project4" passHref>
+        ></styled.GridItemBg>
+        <Link href="#" passHref>
           <a className="grid__link grid__item-content">
-            <Styled.GridItemInner
+            <styled.GridItemInner
               onClick={onCloseButtonClick}
               animate={controls}
               initial="hidden"
@@ -134,21 +135,21 @@ export default function Grid({ gridState, setGridState }) {
             >
               <h3 className="grid__item-title">project</h3>
               <span className="grid__item-desc">Under Construction</span>
-            </Styled.GridItemInner>
+            </styled.GridItemInner>
           </a>
         </Link>
-      </Styled.GridItem>
-      <Styled.GridItem>
-        <Styled.GridItemBg
+      </styled.GridItem>
+      <styled.GridItem>
+        <styled.GridItemBg
           pos={7}
           gridState={gridState}
           animate={controls}
           initial="hidden"
           variants={gridVariants.gridItem7}
-        ></Styled.GridItemBg>
-        <Link href="/work/project3" passHref>
+        ></styled.GridItemBg>
+        <Link href="#" passHref>
           <a className="grid__link grid__item-content">
-            <Styled.GridItemInner
+            <styled.GridItemInner
               onClick={onCloseButtonClick}
               animate={controls}
               initial="hidden"
@@ -156,21 +157,21 @@ export default function Grid({ gridState, setGridState }) {
             >
               <h3 className="grid__item-title">project</h3>
               <span className="grid__item-desc">Under Construction</span>
-            </Styled.GridItemInner>
+            </styled.GridItemInner>
           </a>
         </Link>
-      </Styled.GridItem>
-      <Styled.GridItem>
-        <Styled.GridItemBg
+      </styled.GridItem>
+      <styled.GridItem>
+        <styled.GridItemBg
           pos={8}
           gridState={gridState}
           animate={controls}
           initial="hidden"
           variants={gridVariants.gridItem8}
-        ></Styled.GridItemBg>
-        <Link href="/work/project2" passHref>
+        ></styled.GridItemBg>
+        <Link href="#" passHref>
           <a className="grid__link grid__item-content">
-            <Styled.GridItemInner
+            <styled.GridItemInner
               onClick={onCloseButtonClick}
               animate={controls}
               initial="hidden"
@@ -178,21 +179,29 @@ export default function Grid({ gridState, setGridState }) {
             >
               <h3 className="grid__item-title">project</h3>
               <span className="grid__item-desc">Under Construction</span>
-            </Styled.GridItemInner>
+            </styled.GridItemInner>
           </a>
         </Link>
-      </Styled.GridItem>
-      <Styled.GridItem>
-        <Styled.GridItemBg
+      </styled.GridItem>
+      <styled.GridItem>
+        <styled.GridItemBg
           pos={9}
           gridState={gridState}
           animate={controls}
           initial="hidden"
           variants={gridVariants.gridItem9}
-        ></Styled.GridItemBg>
-        <Link href="/work/project1" passHref>
+        >
+          <Image
+            src="/images/grid/hotflix.jpg"
+            alt="hotflix"
+            layout="fill"
+            objectFit="cover"
+          />
+          <styled.GridOverLay />
+        </styled.GridItemBg>
+        <Link href="/work/hotflix" passHref>
           <a className="grid__link grid__item-content">
-            <Styled.GridItemInner
+            <styled.GridItemInner
               onClick={onCloseButtonClick}
               animate={controls}
               initial="hidden"
@@ -202,10 +211,10 @@ export default function Grid({ gridState, setGridState }) {
               <span className="grid__item-desc">
                 A project that got 3.4k upvotes on Reddit.
               </span>
-            </Styled.GridItemInner>
+            </styled.GridItemInner>
           </a>
         </Link>
-      </Styled.GridItem>
-    </Styled.Grid>
+      </styled.GridItem>
+    </styled.Grid>
   );
 }

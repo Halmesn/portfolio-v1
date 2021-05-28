@@ -30,7 +30,7 @@ export const Grid = styled.div`
     font-weight: normal;
     font-size: 2.4rem;
     letter-spacing: 0.15rem;
-    color: #232320;
+    color: white;
   }
 
   .menu-trigger {
@@ -40,14 +40,14 @@ export const Grid = styled.div`
     background: none;
     border: 0;
     cursor: pointer;
-    color: #232320;
+    color: black;
     outline: none;
   }
 
   .grid__item-desc {
     font-size: 1.6rem;
     margin: 0.5rem 0 0 0;
-    color: #232320;
+    color: white;
 
     ::after {
       content: '...';
@@ -139,12 +139,23 @@ export const GridItem = styled.div`
   }
 `;
 
+export const GridOverLay = styled.div`
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(11, 18, 27, 0.7);
+  z-index: 0;
+`;
+
 export const GridItemBg = styled(motion.div)`
   position: absolute;
   width: 100%;
   height: 100%;
   top: 0;
   left: 0;
+  z-index: -1;
   transform: ${({ pos }) =>
     pos % 2 === 0 ? 'scaleY(0) scaleX(1)' : 'scaleY(1) scaleX(0)'};
   opacity: 0;
