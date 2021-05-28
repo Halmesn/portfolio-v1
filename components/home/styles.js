@@ -45,8 +45,8 @@ export const LinkWrapper = styled.div`
 `;
 
 export const NavLink = styled.a`
-  background: #fff6eb;
-  color: #462905;
+  background: ${({ theme }) => theme.aboutLine};
+  color: ${({ theme }) => theme.secondary};
   transition: all 0.2s ease-in-out;
   border-radius: 2rem;
   padding: 1.2rem 2rem;
