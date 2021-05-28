@@ -6,14 +6,11 @@ import { Icon as ReuseIcon } from 'components/layout/header/navbarStyles';
 export const Hero = styled.section`
   width: 90%;
   margin: 0 auto;
-  align-self: center;
   z-index: 1;
-  margin-top: 30rem;
-
-  @media (max-width: 26.5625em) {
-    align-self: start;
-    margin-top: 15rem;
-  }
+  position: absolute;
+  top: 50%;
+  left: 5%;
+  transform: translateY(-50%);
 `;
 
 export const Description = styled(motion.div)`

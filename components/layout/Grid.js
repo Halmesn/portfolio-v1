@@ -8,10 +8,6 @@ import Image from 'next/image';
 import { useAnimation } from 'framer-motion';
 
 export default function Grid({ gridState, setGridState }) {
-  const onCloseButtonClick = () => {
-    setGridState('close');
-  };
-
   const controls = useAnimation();
 
   useEffect(() => {
@@ -56,7 +52,10 @@ export default function Grid({ gridState, setGridState }) {
             initial="hidden"
             variants={gridVariants.gridText}
           >
-            <button onClick={onCloseButtonClick} className="menu-trigger">
+            <button
+              onClick={() => setGridState('close')}
+              className="menu-trigger"
+            >
               - close
             </button>
           </styled.GridItemInner>
@@ -88,7 +87,10 @@ export default function Grid({ gridState, setGridState }) {
               initial="hidden"
               variants={gridVariants.gridText}
             >
-              <h3 onClick={onCloseButtonClick} className="grid__item-title ">
+              <h3
+                onClick={() => setGridState('close')}
+                className="grid__item-title "
+              >
                 Home
               </h3>
             </styled.GridItemInner>
@@ -106,7 +108,6 @@ export default function Grid({ gridState, setGridState }) {
         <Link href="#" passHref>
           <a className="grid__link grid__item-content">
             <styled.GridItemInner
-              onClick={onCloseButtonClick}
               animate={controls}
               initial="hidden"
               variants={gridVariants.gridText}
@@ -128,7 +129,6 @@ export default function Grid({ gridState, setGridState }) {
         <Link href="#" passHref>
           <a className="grid__link grid__item-content">
             <styled.GridItemInner
-              onClick={onCloseButtonClick}
               animate={controls}
               initial="hidden"
               variants={gridVariants.gridText}
@@ -150,7 +150,6 @@ export default function Grid({ gridState, setGridState }) {
         <Link href="#" passHref>
           <a className="grid__link grid__item-content">
             <styled.GridItemInner
-              onClick={onCloseButtonClick}
               animate={controls}
               initial="hidden"
               variants={gridVariants.gridText}
@@ -172,7 +171,6 @@ export default function Grid({ gridState, setGridState }) {
         <Link href="#" passHref>
           <a className="grid__link grid__item-content">
             <styled.GridItemInner
-              onClick={onCloseButtonClick}
               animate={controls}
               initial="hidden"
               variants={gridVariants.gridText}
@@ -202,7 +200,7 @@ export default function Grid({ gridState, setGridState }) {
         <Link href="/work/hotflix" passHref>
           <a className="grid__link grid__item-content">
             <styled.GridItemInner
-              onClick={onCloseButtonClick}
+              onClick={() => setGridState('close')}
               animate={controls}
               initial="hidden"
               variants={gridVariants.gridText}

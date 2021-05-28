@@ -18,14 +18,20 @@ export default function Navbar({
   const isHome = url === '/' ? true : false;
   const { width } = useViewport();
 
+  const projectUrl = () => {
+    if (isHome && width < 900) return '/project';
+    else if (width > 900) return '#';
+    else return '/';
+  };
+
   return (
     <styled.Navbar gridState={gridState} isHome={isHome}>
       <styled.NavList isHome={isHome}>
         <styled.LinkWrapper
-          onClick={() => isHome && setGridState('open')}
+          onClick={() => width > 900 && isHome && setGridState('open')}
           className="project"
         >
-          <styled.NavLink href={isHome ? '#' : '/'} rotate="-2deg">
+          <styled.NavLink href={projectUrl()} rotate="-2deg">
             <span>{isHome ? 'Project' : 'Home'}</span>
           </styled.NavLink>
         </styled.LinkWrapper>

@@ -103,6 +103,10 @@ export const GridItem = styled.div`
 
     .grid__item-title {
       font-size: 3.2rem;
+
+      @media (max-width: 65.625em) {
+        font-size: 2.8rem;
+      }
     }
   }
 

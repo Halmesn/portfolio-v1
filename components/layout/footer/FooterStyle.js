@@ -19,6 +19,10 @@ export const GridButton = styled.button`
   color: ${({ theme }) => theme.secondary};
   margin-left: 3rem;
   outline: none;
+
+  @media (max-width: 56.25em) {
+    display: none;
+  }
 `;
 
 export const ChatButton = styled.button`

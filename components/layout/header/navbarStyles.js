@@ -78,6 +78,10 @@ export const NavLink = styled(StyledLink)`
   align-items: center;
   padding: 2.5rem 3.5rem;
 
+  @media (max-width: 26.5625em) {
+    padding: 2.5rem 1.5rem;
+  }
+
   span {
     position: relative;
 

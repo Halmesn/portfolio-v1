@@ -16,6 +16,14 @@ export const ChatBot = styled.div`
   opacity: 0;
   transform: translate3d(0, 3rem, 0);
   transition: all 0.1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+  @media (max-width: 27.5em) {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+  }
+
   ${({ chatBotState }) =>
     chatBotState === 'open' &&
     css`
@@ -95,6 +103,10 @@ export const ChatHeader = styled.div`
   border-radius: 6px 6px 0 0;
   z-index: 3;
 
+  @media (max-width: 27.5em) {
+    border-radius: 0;
+  }
+
   .avatar {
     border-radius: 50%;
     border: 2px solid #fff !important;
@@ -151,6 +163,10 @@ export const ChatContent = styled.div`
   top: 8rem;
   padding: 0 1.6rem 4rem;
   overflow: auto;
+
+  @media (max-width: 27.5em) {
+    height: 100%;
+  }
 `;
 
 export const ChatAnswer = styled(motion.div)`
