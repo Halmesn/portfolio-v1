@@ -165,7 +165,7 @@ export const ChatContent = styled.div`
   overflow: auto;
 
   @media (max-width: 27.5em) {
-    height: 100%;
+    height: 90%;
   }
 `;
 
