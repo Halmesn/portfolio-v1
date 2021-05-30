@@ -19,9 +19,16 @@ export const Hotflix = styled.div`
 export const TextContainer = styled.div`
   &.center {
     text-align: center;
-
     p {
       margin: 0 auto;
+    }
+
+    @media (max-width: 34.375em) {
+      text-align: left;
+
+      p {
+        margin: unset;
+      }
     }
   }
 `;
@@ -96,10 +103,10 @@ export const Table = styled.table`
 
     a {
       position: relative;
-      z-index: 2;
+      z-index: 0;
       .link {
         position: relative;
-        z-index: 2;
+        z-index: 0;
         ::before {
           content: '';
           width: 100%;
