@@ -43,6 +43,7 @@ export const SubTitle = styled.h2`
 
   @media (max-width: 34.375em) {
     font-size: 3rem;
+    line-height: 1.2;
   }
 `;
 
@@ -60,6 +61,10 @@ export const Description = styled.p`
     display: block;
     margin-top: 2rem;
     margin-bottom: 5rem;
+
+    @media (max-width: 34.375em) {
+      margin-bottom: 3rem;
+    }
   }
 `;
 
@@ -67,18 +72,21 @@ export const Table = styled.table`
   width: 100%;
   text-align: left;
   color: ${({ theme }) => theme.grey};
+  font-size: 1.6rem;
+
+  @media (max-width: 34.375em) {
+    font-size: 1.4rem;
+  }
 
   th {
     font-weight: 700;
     text-transform: uppercase;
-    font-size: 1.6rem;
     line-height: 1.2;
     padding-bottom: 2rem;
   }
 
   td {
     width: 10rem;
-    font-size: 1.6rem;
     line-height: 1.8;
     position: relative;
 
@@ -120,7 +128,9 @@ export const ImageContainer = styled.div`
   margin-top: 5rem;
   margin-bottom: 10rem;
 
-  @media (max-width: 53.125em) {
+  @media (max-width: 34.375em) {
+    margin-top: 3rem;
+    margin-bottom: 5rem;
   }
 `;
 
@@ -144,6 +154,10 @@ export const GridContainer = styled.div`
   gap: 4rem;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
+
+  @media (max-width: 34.375em) {
+    margin: 5rem 0;
+  }
 
   @media (max-width: 53.125em) {
     grid-template-columns: 1fr;
