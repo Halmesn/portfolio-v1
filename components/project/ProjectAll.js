@@ -88,6 +88,10 @@ export default function ProjectAll() {
           </styled.ProjectImage>
         </styled.FeaturedProject>
       </styled.ProjectsContainer>
+
+      <styled.Heading className="more">
+        More project coming soon!
+      </styled.Heading>
     </styled.ProjectAll>
   );
 }

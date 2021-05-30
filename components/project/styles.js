@@ -15,6 +15,10 @@ export const Heading = styled.h2`
   width: 100%;
   font-size: clamp(2.6rem, 5vw, 3.2rem);
   white-space: nowrap;
+
+  &.more {
+    margin-top: 6rem;
+  }
 `;
 
 export const ProjectsContainer = styled.ul`
