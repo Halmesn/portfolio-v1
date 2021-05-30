@@ -10,6 +10,7 @@ export const lightTheme = {
   aboutLine: '#fdf5ee',
   arrow: '#fe66fe',
   aboutResume: 'transparent',
+  projectText: '#fefaf6',
 };
 
 export const darkTheme = {
@@ -24,4 +25,5 @@ export const darkTheme = {
   aboutLine: '#071325',
   arrow: '#64ffda',
   aboutResume: '#64ffda',
+  projectText: '#64ffda',
 };

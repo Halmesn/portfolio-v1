@@ -16,6 +16,8 @@ export const Heading = styled.h2`
   font-size: clamp(2.6rem, 5vw, 3.2rem);
   white-space: nowrap;
 
+  color: ${({ theme }) => theme.secondary};
+
   &.more {
     margin-top: 6rem;
   }
@@ -49,7 +51,7 @@ export const ProjectContent = styled.div`
     padding: 3rem 2.5rem 2rem;
   }
 
-  color: ${({ theme }) => theme.primary};
+  color: ${({ theme }) => theme.projectText};
 
   .project-overline {
     margin: 1rem 0px;
