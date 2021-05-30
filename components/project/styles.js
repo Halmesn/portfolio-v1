@@ -69,10 +69,10 @@ export const ProjectContent = styled.div`
   .project-description {
     position: relative;
     z-index: 2;
-    padding: 2.5rem;
+    /* padding: 2.5rem; */
     border-radius: 4px;
-    background: ${({ theme }) => theme.aboutLine};
-    color: ${({ theme }) => theme.secondary};
+    /* background: ${({ theme }) => theme.aboutLine}; */
+    color: ${({ theme }) => theme.primary};
     font-size: 1.5rem;
   }
 

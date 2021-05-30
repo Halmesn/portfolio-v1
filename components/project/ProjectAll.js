@@ -18,9 +18,11 @@ export default function ProjectAll() {
               <div className="project-description">
                 <p>
                   This is a project I made that got 3.4k upvotes on Reddit. It
-                  reproduces the experience of browsing real Netflix by using
-                  reusable React hooks and components along with complicated CSS
-                  and multiple API calls.
+                  reproduces the experience of browsing real Netflix. You can
+                  log in your own account and set your unique profile, then
+                  watch various kinds of TV shows or movies. You can also search
+                  for TV shows, read about their cast information, different
+                  seasons with introductions, and even related recommendations!
                 </p>
               </div>
               <ul className="project-tech-list">
