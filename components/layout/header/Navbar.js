@@ -20,7 +20,7 @@ export default function Navbar({
 
   const projectUrl = () => {
     if (isHome && width < 900) return '/project';
-    else if (width > 900) return '#';
+    else if (width > 900 && isHome) return '#';
     else return '/';
   };
 

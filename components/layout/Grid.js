@@ -197,7 +197,7 @@ export default function Grid({ gridState, setGridState }) {
           />
           <styled.GridOverLay />
         </styled.GridItemBg>
-        <Link href="/work/hotflix" passHref>
+        <Link href="/project/hotflix" passHref>
           <a className="grid__link grid__item-content">
             <styled.GridItemInner
               onClick={() => setGridState('close')}
