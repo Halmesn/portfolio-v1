@@ -19,10 +19,10 @@ export default function ProjectAll() {
                 <p>
                   This is a project I made that got 3.4k upvotes on Reddit. It
                   reproduces the experience of browsing real Netflix. You can
-                  log in your own account and set your unique profile, then
+                  log in to your own account and set your unique profile, then
                   watch various kinds of TV shows or movies. You can also search
-                  for TV shows, read about their cast information, different
-                  seasons with introductions, and even related recommendations!
+                  for TV shows, read about their cast information, and much
+                  more!
                 </p>
               </div>
               <ul className="project-tech-list">
