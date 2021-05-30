@@ -51,9 +51,9 @@ export default function AboutContent() {
         </p>
         <span
           className="scroll"
-          onClick={() => {
-            ref.current.scrollIntoView({ behavior: 'smooth', block: 'center' });
-          }}
+          onClick={() =>
+            ref.current.scrollIntoView({ behavior: 'smooth', block: 'center' })
+          }
         ></span>
       </div>
       <div className="content">
