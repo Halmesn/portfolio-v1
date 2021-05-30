@@ -1,3 +1,5 @@
+import ProjectAll from 'components/project/ProjectAll';
+
 export default function Project() {
-  return <div>This is all my projects</div>;
+  return <ProjectAll />;
 }
