@@ -112,6 +112,10 @@ export const About = styled.section`
         margin-left: -3rem;
         opacity: 0.8;
         text-align: center;
+
+        @media (max-width: 34.375em) {
+          font-size: 1rem;
+        }
       }
     }
 
