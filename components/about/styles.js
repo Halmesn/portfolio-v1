@@ -229,6 +229,10 @@ export const Description = styled(motion.div)`
     list-style: none;
     font-size: 1.5rem;
 
+    @media (max-width: 34.375em) {
+      grid-template-columns: 1fr;
+    }
+
     li {
       position: relative;
       margin-bottom: 1rem;
