@@ -86,7 +86,7 @@ export const About = styled.section`
 
     @media (max-width: 56.25em) {
       height: 60vh;
-      width: 70%;
+      width: 80%;
     }
 
     .scroll {
@@ -97,7 +97,8 @@ export const About = styled.section`
       cursor: pointer;
 
       @media (max-width: 56.25em) {
-        display: none;
+        bottom: 4.3rem;
+        pointer-events: none;
       }
 
       ::before {
@@ -117,6 +118,10 @@ export const About = styled.section`
     h2 {
       font-size: 7rem;
       color: ${({ theme }) => theme.secondary};
+
+      @media (max-width: 34.375em) {
+        font-size: 4.5rem;
+      }
     }
 
     @keyframes fadeInUp {
@@ -156,8 +161,8 @@ export const About = styled.section`
         order: 1;
 
         @media (max-width: 34.375em) {
-          width: 20rem;
-          height: 20rem;
+          width: 30rem;
+          height: 30rem;
           justify-self: center;
         }
       }
@@ -174,8 +179,8 @@ export const About = styled.section`
         order: 3;
 
         @media (max-width: 34.375em) {
-          width: 20rem;
-          height: 20rem;
+          width: 30rem;
+          height: 30rem;
           justify-self: center;
         }
       }
@@ -184,14 +189,17 @@ export const About = styled.section`
         order: 5;
 
         @media (max-width: 34.375em) {
-          width: 20rem;
-          height: 20rem;
+          width: 30rem;
+          height: 30rem;
           justify-self: center;
         }
       }
 
       .grid-container:nth-child(6) {
         order: 4;
+        @media (max-width: 34.375em) {
+          margin-top: 2rem;
+        }
       }
     }
 

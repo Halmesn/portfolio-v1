@@ -4,11 +4,13 @@ import { ChatBotContext } from 'components/layout/Layout';
 
 import { useContext, useEffect, useRef } from 'react';
 import { useInView } from 'react-intersection-observer';
+import { useViewport } from 'hooks/useViewport';
 import { useAnimation } from 'framer-motion';
 import Image from 'next/image';
 
 export default function AboutContent() {
   const { setChatBotState } = useContext(ChatBotContext);
+  const { width } = useViewport();
 
   const ref = useRef();
 
@@ -25,20 +27,18 @@ export default function AboutContent() {
   });
 
   useEffect(() => {
-    if (inView) {
+    if (width < 900) {
       controls.start('visible');
-    }
-    if (inView2) {
       controls.start('visible2');
-    }
-    if (inView3) {
       controls.start('visible3');
-    }
-  }, [controls, inView, inView2, inView3]);
+    } else {
+      if (inView) controls.start('visible');
 
-  const onChatClick = () => {
-    setChatBotState('open');
-  };
+      if (inView2) controls.start('visible2');
+
+      if (inView3) controls.start('visible3');
+    }
+  }, [controls, inView, inView2, inView3, width]);
 
   return (
     <styled.About>
@@ -215,7 +215,7 @@ export default function AboutContent() {
           >
             <p>
               Shoot me over an email, have a look at my resume, or just&nbsp;
-              <span onClick={onChatClick} className="chat">
+              <span onClick={() => setChatBotState('open')} className="chat">
                 talk
               </span>
               &nbsp;with me!
