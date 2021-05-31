@@ -21,6 +21,10 @@ export const About = styled.section`
     margin-top: 2.5rem;
     line-height: 1.7;
 
+    @media (max-width: 34.375em) {
+      font-size: 1.4rem;
+    }
+
     .chat {
       position: relative;
       cursor: pointer;
@@ -80,12 +84,21 @@ export const About = styled.section`
     align-items: center;
     position: relative;
 
+    @media (max-width: 56.25em) {
+      height: 60vh;
+      width: 70%;
+    }
+
     .scroll {
       position: absolute;
       left: 50%;
       bottom: 2rem;
       animation: bounce 1.2s ease infinite;
       cursor: pointer;
+
+      @media (max-width: 56.25em) {
+        display: none;
+      }
 
       ::before {
         color: ${({ theme }) => theme.secondary};
@@ -134,6 +147,58 @@ export const About = styled.section`
     align-items: center;
     gap: 9.5rem 3rem;
     padding: 5rem 0;
+
+    @media (max-width: 56.25em) {
+      grid-template-columns: 1fr;
+      gap: 3rem 0;
+
+      .grid-container:first-child {
+        order: 1;
+
+        @media (max-width: 34.375em) {
+          width: 20rem;
+          height: 20rem;
+          justify-self: center;
+        }
+      }
+
+      .grid-container:nth-child(2) {
+        order: 0;
+      }
+
+      .grid-container:nth-child(3) {
+        order: 2;
+      }
+
+      .grid-container:nth-child(4) {
+        order: 3;
+
+        @media (max-width: 34.375em) {
+          width: 20rem;
+          height: 20rem;
+          justify-self: center;
+        }
+      }
+
+      .grid-container:nth-child(5) {
+        order: 5;
+
+        @media (max-width: 34.375em) {
+          width: 20rem;
+          height: 20rem;
+          justify-self: center;
+        }
+      }
+
+      .grid-container:nth-child(6) {
+        order: 4;
+      }
+    }
+
+    @media (max-width: 34.375em) {
+      width: 100%;
+      padding: 0 2rem;
+    }
   }
 `;
 
@@ -148,14 +213,18 @@ export const Title = styled(motion.h3)`
   font-size: 3.5rem;
   line-height: 1.5;
   color: ${({ theme }) => theme.title};
+
+  @media (max-width: 34.375em) {
+    font-size: 2.5rem;
+  }
 `;
 
 export const Description = styled(motion.div)`
   .skills {
     display: grid;
     grid-template-columns: repeat(3, minmax(14rem, 20rem));
-    padding: 0px;
-    margin: 2rem 0px 0px;
+    padding: 0;
+    margin: 2rem 0 0;
     overflow: hidden;
     list-style: none;
     font-size: 1.5rem;
