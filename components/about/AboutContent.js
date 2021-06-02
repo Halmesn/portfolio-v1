@@ -228,7 +228,7 @@ export default function AboutContent() {
                 </a>
               </styled.Button>
               <styled.Button>
-                <a href="#">
+                <a href="https://drive.google.com/file/d/1Neh66oJyiG87217mAF55pRB-Lr48LvYK/view?usp=sharing">
                   <styled.ResumeIcon />
                   Resume
                 </a>

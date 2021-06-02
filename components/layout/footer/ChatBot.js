@@ -92,7 +92,10 @@ export default function ChatBot({ setChatBotState, chatBotState }) {
             <p className="mt-sm">I'm so Excited🕺!</p>
             <p>
               Have a look at my
-              <a href="#" className="link-btn">
+              <a
+                href="https://drive.google.com/file/d/1Neh66oJyiG87217mAF55pRB-Lr48LvYK/view?usp=sharing"
+                className="link-btn"
+              >
                 resume💾
               </a>
               and let's
