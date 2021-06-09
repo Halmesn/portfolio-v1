@@ -206,8 +206,8 @@ export default function Grid({ gridState, setGridState }) {
               variants={gridVariants.gridText}
             >
               <h3 className="grid__item-title">Hotflix</h3>
-              <span className="grid__item-desc">
-                A project that got 3.4k upvotes on Reddit.
+              <span className="grid__item-desc no-after">
+                A project that got 3.4k upvotes on Reddit
               </span>
             </styled.GridItemInner>
           </a>

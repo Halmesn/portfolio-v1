@@ -11,7 +11,7 @@ export default function HotflixContent() {
           Hotflix is a production-ready, open-source Netflix clone built with
           React, Next.js, styled-component, and MongoDB. It reproduces the
           experience of browsing real Netflix by using reusable React hooks and
-          components along with complicated CSS and multiple API calls.{' '}
+          components along with complex CSS and multiple API calls.{' '}
           <span>
             This project got 3.4k upvotes on Reddit and will be the best Netflix
             clone you have ever seen.
@@ -80,15 +80,15 @@ export default function HotflixContent() {
         <styled.SubTitle>Project Purpose and Goal</styled.SubTitle>
         <styled.Description>
           After 8 months of self-teaching, I decided to build a big and
-          complicated project without the help of any tutorials. The first idea
-          that came into my mind is a Netflix clone. Simply because I watch it
-          every day! I'm very familiar with its UI and UX, as well as all the
-          basic functionalities. Wouldn't it be so cool if I could make my own
-          Netflix?{' '}
+          comprehensive project without the help of any tutorials. The first
+          idea that came into my mind was a Netflix clone. Simply because I
+          watch it every day! I'm very familiar with its UI and UX, as well as
+          all the basic functionalities. Wouldn't it be so cool if I could make
+          my own Netflix?{' '}
           <span>
-            So my initial goal was to make a Netflix clone that can offer the
-            user the same functionalities like sign up, sign in, create, edit,
-            save, delete the profile, and most importantly, they can watch
+            So my initial goal was to make a Netflix clone that could offer
+            users the same functionalities like sign up, sign in, create, edit,
+            save, delete the profile, and most importantly, they could watch
             videos on my website!
           </span>
         </styled.Description>
@@ -189,8 +189,8 @@ export default function HotflixContent() {
           <span>
             When I first began, I would write sloppy code and move on, but now I
             know how doing so can come back to bite you; I now spend a lot more
-            time refactoring and improving every line I code I write, for the
-            best readability and far fewer headaches.
+            time refactoring and improving every line I write, for the best
+            readability and far fewer headaches.
           </span>
         </styled.Description>
       </styled.TextContainer>

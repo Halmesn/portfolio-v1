@@ -20,9 +20,9 @@ export default function Hero() {
           Hi. I'm Adrian Li. <span>A front-end developer.</span>
         </h1>
         <p>
-          I love to spend hours and hours building things, resolving problems,
+          I love spending hours and hours building things, resolving problems,
           and learning new technologies.
-          <span>Programming makes me a happy man.😄</span>
+          <span>Programming makes me a happy man😄</span>
         </p>
       </styled.Description>
       {width < 850 && (

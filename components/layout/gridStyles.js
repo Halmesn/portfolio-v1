@@ -49,6 +49,12 @@ export const Grid = styled.div`
     margin: 0.5rem 0 0 0;
     color: white;
 
+    &.no-after {
+      ::after {
+        content: '';
+      }
+    }
+
     ::after {
       content: '...';
       position: relative;

@@ -33,7 +33,7 @@ export default function ChatBot({ setChatBotState, chatBotState }) {
         : currentQuestion === 2
         ? `Fun facts about you?`
         : currentQuestion === 3
-        ? `Others ways to contact you?`
+        ? `Other ways to contact you?`
         : currentQuestion === 4
         ? `I'd like to hire you!`
         : null;
@@ -43,7 +43,7 @@ export default function ChatBot({ setChatBotState, chatBotState }) {
           <div className="agent" ref={contentRef}>
             <p>Well hi there!</p>
             <br />
-            <p>Thanks for saying hi 😁.</p>
+            <p>Thanks for saying hi 😁</p>
             <br />
             <p> I hope you've enjoyed browsing my website!</p>
           </div>
@@ -53,19 +53,19 @@ export default function ChatBot({ setChatBotState, chatBotState }) {
         <Delayed>
           <div className="agent" ref={contentRef}>
             <p>
-              1. I used to be a news writer✍️ on Tencent platform for 4 years.
-              And there is one article that had got more than 15 millions views
-              in less than 15 hours.
+              1. I used to be a digital media editor✍️ on Tencent platform for 4
+              years. And there was one article that I wrote got more than 15
+              million views in less than 15 hours.
             </p>
             <br />
             <p>
               2. I want to become a competitive powerlifer💪 in my 30's, and a
-              jacked old man in my 80's.
+              jacked old man in my 80's 😈.
             </p>
             <br />
             <p>
               3. I really really love my wife. She is the most gorgeous woman in
-              the world👩!
+              the world 👩!
             </p>
           </div>
           <div className="agent">Can I help you with anything else?</div>
@@ -146,7 +146,7 @@ export default function ChatBot({ setChatBotState, chatBotState }) {
             }}
             className="question-btn"
           >
-            💬 Others ways to contact you?
+            💬 Other ways to contact you?
           </button>
           <button
             onClick={() => {
