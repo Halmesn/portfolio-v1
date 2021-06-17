@@ -81,8 +81,8 @@ export default function ProjectAll() {
           <styled.ProjectImage>
             <div>
               <Image
-                src="/images/project/hotflix.png"
-                alt="hotflix screenshot"
+                src="/images/hotflix/hotflix-bg.jpg"
+                alt="hotflix background"
                 layout="fill"
                 objectFit="cover"
               />
@@ -162,7 +162,7 @@ export default function ProjectAll() {
             <div>
               <Image
                 src="/images/grid/griddy.jpg"
-                alt="griddy screenshot"
+                alt="griddy background"
                 layout="fill"
                 objectFit="cover"
               />
