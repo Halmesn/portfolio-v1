@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Hotflix = styled.div`
-  padding: 20rem 15rem;
+  padding: ${({ padding }) => padding || '20rem 15rem'};
 
   @media (max-width: 53.125em) {
     padding: 20rem 8rem;

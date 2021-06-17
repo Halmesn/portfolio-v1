@@ -163,6 +163,7 @@ export const ChatContent = styled.div`
   top: 8rem;
   padding: 0 1.6rem 4rem;
   overflow: auto;
+  z-index: 10;
 
   @media (max-width: 27.5em) {
     height: 90%;

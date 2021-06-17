@@ -25,6 +25,7 @@ export const Heading = styled.h2`
 
 export const ProjectsContainer = styled.ul`
   list-style: none;
+  margin-bottom: 6rem;
 `;
 
 export const FeaturedProject = styled.li`
@@ -41,7 +42,7 @@ export const ProjectContent = styled.div`
   justify-content: center;
   height: 100%;
   padding: 4rem 4rem 3rem;
-  z-index: 5;
+  z-index: 0;
   text-align: left;
   position: relative;
   grid-area: 1 / 1 / -1 / 7;
@@ -70,7 +71,7 @@ export const ProjectContent = styled.div`
 
   .project-description {
     position: relative;
-    z-index: 2;
+    z-index: -3;
     padding: 2.5rem;
     border-radius: 4px;
     background: ${({ theme }) => theme.aboutLine};
@@ -82,7 +83,7 @@ export const ProjectContent = styled.div`
     display: flex;
     flex-wrap: wrap;
     position: relative;
-    z-index: 2;
+    z-index: -3;
     margin: 25px 0px 10px;
     padding: 0px;
     list-style: none;
@@ -124,7 +125,7 @@ export const ProjectImage = styled.div`
   grid-area: 1 / 6 / -1 / -1;
   grid-column: 1 / -1;
 
-  a {
+  div {
     display: inline-block;
     text-decoration: none;
     text-decoration-skip-ink: auto;
@@ -134,13 +135,14 @@ export const ProjectImage = styled.div`
     border-radius: 4px;
     vertical-align: middle;
     position: relative;
+    z-index: -2;
 
     ::before {
       content: '';
       position: absolute;
       width: 100%;
       height: 100%;
-      z-index: 3;
+      z-index: -2;
       transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
       background: rgba(11, 18, 27, 0.7);
       border-radius: 4px;
@@ -148,6 +150,7 @@ export const ProjectImage = styled.div`
 
     img {
       border-radius: 4px;
+      z-index: -3;
     }
   }
 `;
