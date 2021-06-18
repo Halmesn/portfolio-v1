@@ -270,6 +270,11 @@ export const Description = styled(motion.div)`
         color: ${({ theme }) => theme.arrow};
         line-height: 12px;
         font-size: 2.5rem;
+
+        @media (max-width: 34.375em) {
+          top: 0.4rem;
+          font-size: 1.8rem;
+        }
       }
     }
   }
