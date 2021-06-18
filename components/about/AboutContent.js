@@ -127,18 +127,23 @@ export default function AboutContent() {
               hidden: { opacity: 0, y: 0 },
             }}
           >
-            <p>Here are a few technologies I've been working with recently:</p>
+            <p>
+              Since I wrote my first 'hello world' in HTML, I have gained
+              experience in:
+            </p>
 
-            <ul className="skills">
-              <li>HTML5 & CSS3</li>
-              <li>Sass</li>
-              <li>JavaScript (ES6+)</li>
-              <li>React</li>
-              <li>NextJs</li>
-              <li>Redux-toolkit</li>
-              <li>Styled-Components</li>
-              <li>Git</li>
-              <li>Google Search</li>
+            <ul className="skills one-column">
+              <li>
+                Building Front-End Web Applications ( HTML, JavaScript ES6,
+                React, Next.js, Vue)
+              </li>
+              <li>
+                Applying various CSS solutions( Styled-components, Tailwind CSS,
+                Sass, CSS modules)
+              </li>
+              <li>Building Back-End database(MongoDB, Firebase)</li>
+              <li>Interacting with database(REST APIs, Apollo GraphQL )</li>
+              <li>Version Control tools(Git, Github)</li>
             </ul>
 
             <p>
@@ -149,8 +154,7 @@ export default function AboutContent() {
             <p>The following are things I'm planning to learn this year:</p>
             <ul className="skills">
               <li>TypeScript</li>
-              <li>Advanced React Patterns</li>
-              <li>React Testing</li>
+              <li>Testing</li>
             </ul>
           </styled.Description>
         </div>

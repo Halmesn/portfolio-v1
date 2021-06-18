@@ -241,6 +241,13 @@ export const Description = styled(motion.div)`
     list-style: none;
     font-size: 1.5rem;
 
+    &.one-column {
+      grid-template-columns: 1fr;
+      li:not(:last-child) {
+        margin-bottom: 2rem;
+      }
+    }
+
     @media (max-width: 34.375em) {
       grid-template-columns: 1fr;
     }
