@@ -272,7 +272,7 @@ export const Description = styled(motion.div)`
         font-size: 2.5rem;
 
         @media (max-width: 34.375em) {
-          top: 0.4rem;
+          top: 0.5rem;
           font-size: 1.8rem;
         }
       }
