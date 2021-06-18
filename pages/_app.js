@@ -9,7 +9,7 @@ function MyApp({ Component, pageProps }) {
   return (
     <>
       <Head>
-        <title>Adrian Li | React / JavaScript Front End Developer</title>
+        <title>Adrian Li | React Front-End Developer</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link
           rel="apple-touch-icon"
@@ -29,6 +29,17 @@ function MyApp({ Component, pageProps }) {
           href="/images/favicons/favicon-16x16.png"
         />
         <link rel="manifest" href="/images/favicons/site.webmanifest" />
+        <meta
+          property="og:title"
+          content="Adrian Li | React Front-End Developer"
+        />
+        <meta
+          property="og:image"
+          content="https://adrianli.vercel.app/images/brand/home.png"
+        />
+        <meta property="og:description" content="Adrian Li's portfolio." />
+        <meta property="og:url" content="https://adrianli.vercel.app/" />
+
         <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
       </Head>
 
