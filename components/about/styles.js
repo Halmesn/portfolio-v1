@@ -250,6 +250,10 @@ export const Description = styled(motion.div)`
 
     @media (max-width: 34.375em) {
       grid-template-columns: 1fr;
+
+      li {
+        font-size: 1.4rem;
+      }
     }
 
     li {
