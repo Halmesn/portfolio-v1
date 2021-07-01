@@ -17,7 +17,7 @@ export default function ProjectAll() {
               </h3>
               <div className="project-description">
                 <p>
-                  This is a project I made that got 3.5k upvotes on Reddit. It
+                  This is a project I made that got 3.6k upvotes on Reddit. It
                   reproduces the experience of browsing real Netflix. You can
                   log in to your own account and set your unique profile, then
                   watch various kinds of TV shows or movies. You can also search

@@ -13,7 +13,7 @@ export default function HotflixContent() {
           experience of browsing real Netflix by using reusable React hooks and
           components along with complex CSS and multiple API calls.{' '}
           <span>
-            This project got 3.5k upvotes on Reddit and will be the best Netflix
+            This project got 3.6k upvotes on Reddit and will be the best Netflix
             clone you have ever seen.
           </span>
         </styled.Description>

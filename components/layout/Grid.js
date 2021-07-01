@@ -218,7 +218,7 @@ export default function Grid({ gridState, setGridState }) {
             >
               <h3 className="grid__item-title">Hotflix</h3>
               <span className="grid__item-desc no-after">
-                A project that got 3.5k upvotes on Reddit
+                A project that got 3.6k upvotes on Reddit
               </span>
             </styled.GridItemInner>
           </a>
