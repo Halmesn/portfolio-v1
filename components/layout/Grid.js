@@ -146,27 +146,16 @@ export default function Grid({ gridState, setGridState }) {
           animate={controls}
           initial="hidden"
           variants={gridVariants.gridItem7}
-        >
-          <Image
-            src="/images/grid/griddy.jpg"
-            alt="griddy"
-            layout="fill"
-            objectFit="cover"
-          />
-          <styled.GridOverLay />
-        </styled.GridItemBg>
-        <Link href="/project/griddy" passHref>
+        ></styled.GridItemBg>
+        <Link href="#" passHref>
           <a className="grid__link grid__item-content">
             <styled.GridItemInner
               animate={controls}
               initial="hidden"
               variants={gridVariants.gridText}
-              onClick={() => setGridState('close')}
             >
-              <h3 className="grid__item-title">Griddy</h3>
-              <span className="grid__item-desc no-after">
-                A playground to learn CSS grid
-              </span>
+              <h3 className="grid__item-title">project</h3>
+              <span className="grid__item-desc">Under Construction</span>
             </styled.GridItemInner>
           </a>
         </Link>
