@@ -28,7 +28,7 @@ export default function HotflixContent() {
                 <span className="arrow">▹</span>React
               </td>
               <td>
-                <a href="https://hotflix-movie.vercel.app">
+                <a href="https://hotflix-clone.vercel.app">
                   <span className="link">Site</span>
                 </a>
               </td>

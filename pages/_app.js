@@ -35,10 +35,10 @@ function MyApp({ Component, pageProps }) {
         />
         <meta
           property="og:image"
-          content="https://adrianli.vercel.app/images/brand/home.png"
+          content="https://adrian-li.vercel.app/images/brand/home.png"
         />
         <meta property="og:description" content="Adrian Li's portfolio." />
-        <meta property="og:url" content="https://adrianli.vercel.app/" />
+        <meta property="og:url" content="https://adrian-li.vercel.app/" />
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
       </Head>

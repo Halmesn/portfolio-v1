@@ -52,7 +52,7 @@ export default function ProjectAll() {
                   </svg>
                 </a>
                 <a
-                  href="https://hotflix-movie.vercel.app/"
+                  href="https://hotflix-clone.vercel.app/"
                   aria-label="External Link"
                   className="external"
                   rel="noopener noreferrer"
